@@ -1,44 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "../../styles/index.scss";
 
-import { Context } from "../store/appContext";
-
-import "../../styles/demo.scss";
+import ControlledCarousel from "./controlledCarousel.js";
 
 export class Portfolio extends React.Component {
 	render() {
 		return (
-			<div className="container">
-				<ul className="list-group">
-					<Context.Consumer>
-						{({ store, actions }) => {
-							return store.demo.map((item, index) => {
-								return (
-									<li
-										key={index}
-										className="list-group-item d-flex justify-content-between"
-										style={{ background: item.background }}>
-										<Link to={"/single/" + index}>
-											<span>Link to: {item.title}</span>
-										</Link>
-										<p style={{ color: item.initial }}>
-											{"Check store/store.js scroll to the actions to see the code "}
-										</p>
-										<button
-											className="btn btn-success"
-											onClick={() => actions.changeColor(index, "orange")}>
-											Change Color
-										</button>
-									</li>
-								);
-							});
-						}}
-					</Context.Consumer>
-				</ul>
-				<br />
-				<Link to="/">
-					<button className="btn btn-primary">Back home</button>
-				</Link>
+			<div className="container text-center">
+				{/* 
+				//This commented out header was Hernan's way of explaining how to create the "sTill" logo with two different fonts.
+				<h1>
+					<span className="s">s</span>
+					<span className="T">T</span>
+					<span className="ill">ill</span>
+				</h1> */}
+				<div>
+					<ControlledCarousel />
+				</div>
 			</div>
 		);
 	}

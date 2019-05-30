@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
+import ControlledCarousel from "./controlledCarousel.js";
 
 export class Demo extends React.Component {
 	render() {
@@ -39,6 +40,7 @@ export class Demo extends React.Component {
 				<Link to="/">
 					<button className="btn btn-primary">Back home</button>
 				</Link>
+				<ControlledCarousel />
 			</div>
 		);
 	}
