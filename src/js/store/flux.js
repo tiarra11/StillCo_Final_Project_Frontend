@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			strategyCarousel: [
+			strategyCarouselContent: [
 				{
 					title: "sTrategy",
 					image:

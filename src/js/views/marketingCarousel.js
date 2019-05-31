@@ -3,7 +3,7 @@ import "../../styles/index.scss";
 import Carousel from "react-bootstrap/Carousel";
 import { Context } from "../store/appContext";
 
-class ControlledCarousel extends React.Component {
+class MarketingCarousel extends React.Component {
 	constructor(props, context) {
 		super(props, context);
 
@@ -30,41 +30,46 @@ class ControlledCarousel extends React.Component {
 				{({ store }) => {
 					return (
 						<Carousel activeIndex={index} direction={direction} onSelect={this.handleSelect}>
-							{/* This is the content for the first slide of the first Carousel called "Strategy".
+							{/* This is the content for the first slide of the first Carousel called "Strategy". 
 							The content is comprised of the tem (for image), and a caption (for the blurb of info)*/}
 							<Carousel.Item>
 								<img
 									className="d-block w-100"
-									src={store.strategyCarousel[0].image}
+									src={store.strategyCarouselContent[0].image}
 									alt="First slide"
 								/>
 								<Carousel.Caption>
-									<h3>{store.strategyCarousel[0].title}</h3>
-									<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-									<button>{store.strategyCarousel[0].title}</button>
+									<h1>{store.strategyCarouselContent[0].title}</h1>
+									<h3>{store.strategyCarouselContent[0].header}</h3>
+									<p>{store.strategyCarouselContent[0].info}</p>
 								</Carousel.Caption>
 							</Carousel.Item>
-							{/* This is the content for the first slide of the second Carousel. */}
+
+							{/* This is the content for the second slide of the second Carousel. */}
 							<Carousel.Item>
 								<img
 									className="d-block w-100"
-									src={store.strategyCarousel[1].image}
-									alt="First slide"
+									src={store.strategyCarouselContent[1].image}
+									alt="Second slide"
 								/>
 								<Carousel.Caption>
-									<h3>{store.strategyCarousel[1].title}</h3>
-									<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+									<h1>{store.strategyCarouselContent[1].title}</h1>
+									<h3>{store.strategyCarouselContent[1].header}</h3>
+									<p>{store.strategyCarouselContent[1].info}</p>
 								</Carousel.Caption>
 							</Carousel.Item>
+
+							{/* This is the content for the third slide of the second Carousel. */}
 							<Carousel.Item>
 								<img
 									className="d-block w-100"
-									src={store.strategyCarousel[2].image}
-									alt="First slide"
+									src={store.strategyCarouselContent[2].image}
+									alt="Third slide"
 								/>
 								<Carousel.Caption>
-									<h3>{store.strategyCarousel[2].title}</h3>
-									<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+									<h1>{store.strategyCarouselContent[2].title}</h1>
+									<h3>{store.strategyCarouselContent[2].header}</h3>
+									<p>{store.strategyCarouselContent[2].info}</p>
 								</Carousel.Caption>
 							</Carousel.Item>
 						</Carousel>
@@ -76,4 +81,4 @@ class ControlledCarousel extends React.Component {
 }
 
 // render(<ControlledCarousel />);
-export default ControlledCarousel;
+export default MarketingCarousel;
