@@ -7,14 +7,10 @@ import { About } from "./views/about";
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { Contact } from "./views/contact";
-<<<<<<< HEAD
-=======
-import { Single } from "./views/single";
+// import { Single } from "./views/single";
 import { Login } from "./views/login";
 import { Register } from "./views/register";
->>>>>>> 863954c1210647df9bd8d146c794895f9d47050f
 import injectContext from "./store/appContext";
-
 // import { Navbar } from "./component/navbar";
 import { Navbar } from "./component/navbar_copy";
 import { Footer } from "./component/footer";
