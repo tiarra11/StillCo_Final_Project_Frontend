@@ -17,9 +17,11 @@ export class Navbar extends React.Component {
 					<span className="navbar-toggler-icon" />
 				</button>
 				<div className="collapse navbar-collapse justify-content-center" id="navbarNav">
-					<ul className="navbar-nav">
+					<ul className="navbar-nav navcolor">
 						<li className="nav-item mr-4">
-							<Link to="/">sTill</Link>
+							<Link to="/" className="navcolor">
+								sTill
+							</Link>
 						</li>
 						<li className="nav-item mr-4">
 							<Link to="/about">About</Link>
@@ -32,6 +34,12 @@ export class Navbar extends React.Component {
 						</li>
 						<li className="nav-item mr-4">
 							<Link to="/Contact">Contact</Link>
+						</li>
+						<li className="nav-item mr-4">
+							<Link to="/login">Collective</Link>
+						</li>
+						<li className="nav-item mr-4">
+							<Link to="/register">Register</Link>
 						</li>
 					</ul>
 				</div>

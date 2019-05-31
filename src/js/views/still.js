@@ -3,21 +3,30 @@ import React from "react";
 export class Still extends React.Component {
 	render() {
 		return (
-			<div className="jumbotron bg-transparent text-center mt-5">
-				<h1 />
+			<div className="container bg-transparent mt-5">
+				<div className="row">
+					<div className="col-md-12 text-center still">sTill</div>
 
-				<img
-					src="https://cdn131.picsart.com/248974956033202.jpg?c256x256"
-					className="rounded float-left"
-					alt="..."
-				/>
-				<img
-					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC7VLqibxIlzD7k8O3dOdlVXFFZgTNV2cn6G4qUx3c_uJsHmuT"
-					className="rounded float-right"
-					alt="..."
-				/>
+					<div className="col-md-12  text-center">Collective</div>
+				</div>
 
-				<p />
+				<div className="row text d-flex justify-content-center">
+					<div className="text">Digital</div>
+				</div>
+				<div className="row text d-flex justify-content-center ml-7">
+					<div className="col-2" />
+					<div className="col-3">Strategy</div>
+					<div className="col-3">Identity</div>
+					<div className="col-3">Marketing</div>
+					<div className="col-0" />
+				</div>
+
+				{/*
+					<p className="verticaltext">some text</p>
+
+				<div className="col-md d-flex justify-content-center">
+					<div className="backgrounddiv" />
+				</div>*/}
 			</div>
 		);
 	}

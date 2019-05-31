@@ -7,6 +7,12 @@ import { About } from "./views/about";
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { Contact } from "./views/contact";
+<<<<<<< HEAD
+=======
+import { Single } from "./views/single";
+import { Login } from "./views/login";
+import { Register } from "./views/register";
+>>>>>>> 863954c1210647df9bd8d146c794895f9d47050f
 import injectContext from "./store/appContext";
 
 // import { Navbar } from "./component/navbar";
@@ -31,6 +37,8 @@ export class Layout extends React.Component {
 							<Route exact path="/portfolio" component={Portfolio} />
 							<Route exact path="/services" component={Services} />
 							<Route exact path="/contact" component={Contact} />
+							<Route exact path="/login" component={Login} />
+							<Route exact path="/register" component={Register} />
 
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

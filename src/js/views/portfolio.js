@@ -7,9 +7,10 @@ import MarketingCarousel from "./marketingCarousel.js";
 
 export class Portfolio extends React.Component {
 	render() {
+
 		return (
 			<div className="container text-center">
-				{/* 
+				{/*
 				//This commented out header was Hernan's way of explaining how to create the "sTill" logo with two different fonts.
 				<h1>
 					<span className="s">s</span>
@@ -27,5 +28,6 @@ export class Portfolio extends React.Component {
 				</div>
 			</div>
 		);
+
 	}
 }
