@@ -1,7 +1,9 @@
 import React from "react";
 import "../../styles/index.scss";
 
-import ControlledCarousel from "./controlledCarousel.js";
+import StrategyCarousel from "./strategyCarousel.js";
+import IdentityCarousel from "./identityCarousel.js";
+import MarketingCarousel from "./marketingCarousel.js";
 
 export class Portfolio extends React.Component {
 	render() {
@@ -14,8 +16,14 @@ export class Portfolio extends React.Component {
 					<span className="T">T</span>
 					<span className="ill">ill</span>
 				</h1> */}
-				<div>
-					<ControlledCarousel />
+				<div className="row">
+					<StrategyCarousel />
+				</div>
+				<div className="row my-5">
+					<IdentityCarousel />
+				</div>
+				<div className="row">
+					<MarketingCarousel />
 				</div>
 			</div>
 		);
