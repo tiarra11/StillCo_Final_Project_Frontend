@@ -30,7 +30,7 @@ class ControlledCarousel extends React.Component {
 				{({ store }) => {
 					return (
 						<Carousel activeIndex={index} direction={direction} onSelect={this.handleSelect}>
-							{/* This is the content for the first slide of the first Carousel called "Strategy". 
+							{/* This is the content for the first slide of the first Carousel called "Strategy".
 							The content is comprised of the tem (for image), and a caption (for the blurb of info)*/}
 							<Carousel.Item>
 								<img

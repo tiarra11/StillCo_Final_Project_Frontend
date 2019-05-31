@@ -5,7 +5,6 @@ import ControlledCarousel from "./controlledCarousel.js";
 
 export class Portfolio extends React.Component {
 	render() {
-
 		return (
 			<div className="container text-center">
 				{/*
@@ -20,6 +19,5 @@ export class Portfolio extends React.Component {
 				</div>
 			</div>
 		);
-
 	}
 }
