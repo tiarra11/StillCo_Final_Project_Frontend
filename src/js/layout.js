@@ -8,6 +8,8 @@ import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { Contact } from "./views/contact";
 import { Single } from "./views/single";
+import { Login } from "./views/login";
+import { Register } from "./views/register";
 import injectContext from "./store/appContext";
 
 // import { Navbar } from "./component/navbar";
@@ -32,6 +34,8 @@ export class Layout extends React.Component {
 							<Route exact path="/portfolio" component={Portfolio} />
 							<Route exact path="/services" component={Services} />
 							<Route exact path="/contact" component={Contact} />
+							<Route exact path="/login" component={Login} />
+							<Route exact path="/register" component={Register} />
 
 							<Route path="/single/:theid" component={Single} />
 							<Route render={() => <h1>Not found!</h1>} />
