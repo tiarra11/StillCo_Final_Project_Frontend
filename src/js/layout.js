@@ -1,19 +1,20 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
+import injectContext from "./store/appContext";
 
+import { Navbar } from "./component/navbar";
 import { Still } from "./views/still";
 import { About } from "./views/about";
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
-import { Contact } from "./views/contact";
-// import { Single } from "./views/single";
 import { Login } from "./views/login";
-import { Register } from "./views/register";
-import injectContext from "./store/appContext";
-// import { Navbar } from "./component/navbar";
-import { Navbar } from "./component/navbar_copy";
+import { NotAUser } from "./views/notAUser";
+
 import { Footer } from "./component/footer";
+import { Contact } from "./views/contact";
+
+// import { Single } from "./views/single";
 
 //create your first component
 export class Layout extends React.Component {
@@ -32,9 +33,10 @@ export class Layout extends React.Component {
 							<Route exact path="/about" component={About} />
 							<Route exact path="/portfolio" component={Portfolio} />
 							<Route exact path="/services" component={Services} />
-							<Route exact path="/contact" component={Contact} />
 							<Route exact path="/login" component={Login} />
-							<Route exact path="/register" component={Register} />
+							<Route exact path="/footer" component={Footer} />
+							<Route exact path="/contact" component={Contact} />
+							<Route exact path="/notAUser" component={NotAUser} />
 
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

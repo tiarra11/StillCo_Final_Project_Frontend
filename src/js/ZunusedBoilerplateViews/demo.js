@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
-import ControlledCarousel from "./controlledCarousel.js";
+import ControlledCarousel from "./controlledCarousel.js.js";
 
 export class Demo extends React.Component {
 	render() {
