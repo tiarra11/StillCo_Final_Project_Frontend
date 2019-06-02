@@ -1,39 +1,58 @@
 import React from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import { Row } from "react-bootstrap";
+
 import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
 export class Login extends React.Component {
+	constructor(...args) {
+		super(...args);
+
+		this.state = { validated: false };
+	}
+
+	handleSubmit(event) {
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+		}
+		this.setState({ validated: true });
+	}
+
 	render() {
+		const { validated } = this.state;
 		return (
-			<form className="form-signin">
-				{/*<img className="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt width={72} height={72} />*/}
-				<h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-				<label htmlFor="inputEmail" className="sr-only">
-					Email address
-				</label>
-				<input
-					type="email"
-					id="inputEmail"
-					className="form-control"
-					placeholder="Email address"
-					required
-					autoFocus
-				/>
-				<label htmlFor="inputPassword" className="sr-only">
-					Password
-				</label>
-				<input type="password" id="inputPassword" className="form-control" placeholder="Password" required />
-				<div className="checkbox mb-3">
-					<label>
-						<input type="checkbox" defaultValue="remember-me" /> Remember me
-					</label>
+			<div>
+				<div className="text-center py-5">
+					<h1>The Collective</h1>
 				</div>
-				<button className="btn btn-lg btn-primary btn-block" type="submit">
-					Sign in
-				</button>
-				<p className="mt-5 mb-3 text-muted">© 2017-2018</p>
-			</form>
+				<div className="d-flex justify-content-center">
+					<Form>
+						<Form.Group as={Row} controlId="formHorizontalEmail">
+							<Col sm={75}>
+								<Form.Control type="email" placeholder="Email" />
+							</Col>
+						</Form.Group>
+						<Form.Group as={Row} controlId="formHorizontalPassword">
+							<Col lg={75}>
+								<Form.Control type="password" placeholder="Password" />
+							</Col>
+						</Form.Group>
+						<Form.Group as={Row}>
+							<Col sm={{ span: 20, offset: 3 }}>
+								<Button type="submit">Sign in</Button>
+							</Col>
+						</Form.Group>
+					</Form>
+				</div>
+			</div>
 		);
 	}
 }
+
+// render(<FormExample />);

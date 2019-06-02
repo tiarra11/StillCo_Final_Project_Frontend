@@ -9,10 +9,10 @@ import { About } from "./views/about";
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { Login } from "./views/login";
-import { NotAUser } from "./views/notAUser";
 
 import { Footer } from "./component/footer";
 import { Contact } from "./views/contact";
+import { Terms } from "./views/termsConditions";
 
 // import { Single } from "./views/single";
 
@@ -36,7 +36,7 @@ export class Layout extends React.Component {
 							<Route exact path="/login" component={Login} />
 							<Route exact path="/footer" component={Footer} />
 							<Route exact path="/contact" component={Contact} />
-							<Route exact path="/notAUser" component={NotAUser} />
+							<Route exact path="/terms" component={Terms} />
 
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
