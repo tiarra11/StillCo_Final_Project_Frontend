@@ -10,7 +10,7 @@ import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { Login } from "./views/login";
 import { ALaCartPreScheduler } from "./views/aLaCartPreScheduler";
-import { Scheduler } from "./views/Scheduler";
+import { Scheduler } from "./views/scheduler";
 
 import { Footer } from "./component/footer";
 import { Contact } from "./views/contact";

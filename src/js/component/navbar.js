@@ -19,8 +19,9 @@ export class Navbar extends React.Component {
 				<div className="collapse navbar-collapse justify-content-center" id="navbarNav">
 					<ul className="navbar-nav navcolor">
 						<li className="nav-item mr-4">
-							<Link to="/" className="navcolor">
-								sTill
+							<Link to="/" className="navcolor" id="stillLogo">
+								s<span id="stillT">T</span>
+								ill
 							</Link>
 						</li>
 						<li className="nav-item mr-4">

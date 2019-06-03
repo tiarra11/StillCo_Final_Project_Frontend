@@ -12,7 +12,7 @@ export class Services extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="container rounded-0">
+				<div className="container">
 					<div>
 						<h2>What your brand needs– How you want.</h2>
 						<p id="servicesSectionBlurb">
@@ -65,61 +65,49 @@ export class Services extends React.Component {
 							Social Media Management
 						</Button>
 					</div>
-					<div className="mb-5" />
 				</div>
-				<div className="container my-5">
-					<div className="card-deck">
-						<div className="card">
-							<img src="" className="card-img-top" alt="..." />
-							<div className="card-body">
-								<h5 className="card-title">Vip Package</h5>
-								<p className="card-text">
-									This is a longer card with supporting text below as a natural lead-in to additional
+				<div className="row mx-auto my-5">
+					<CardDeck>
+						<Card>
+							<Card.Header>Featured</Card.Header>
+							<Card.Body>
+								<Card.Title>Card title</Card.Title>
+								<Card.Text>
+									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This content is a little bit longer.
-								</p>
-								<ul>
-									<li>Reason 1</li>
-									<li>Reason 1</li>
-									<li>Reason 1</li>
-									<li>Reason 1</li>
-									<li>Reason 1</li>
-									<li>Reason 1</li>
-									<li>Reason 1</li>
-									<li>Reason 1</li>
-									<li>Reason 1</li>
-								</ul>
-								<p className="card-text">
-									<small className="text-muted" />
-								</p>
-							</div>
-						</div>
-						<div className="card">
-							<img src="..." className="card-img-top" alt="..." />
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
-									This card has supporting text below as a natural lead-in to additional content.
-								</p>
-								<p className="card-text">
-									<small className="text-muted" />
-								</p>
-							</div>
-						</div>
-						<div className="card">
-							<img src="..." className="card-img-top" alt="..." />
-							<div className="card-body">
-								<h5 className="card-title">Card title</h5>
-								<p className="card-text">
+								</Card.Text>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+						<Card>
+							<Card.Header>Featured</Card.Header>
+							<Card.Body>
+								<Card.Title>Card title</Card.Title>
+								<Card.Text>
+									This card has supporting text below as a natural lead-in to additional content.{" "}
+								</Card.Text>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+						<Card>
+							<Card.Header>Featured</Card.Header>
+							<Card.Body>
+								<Card.Title>Card title</Card.Title>
+								<Card.Text>
 									This is a wider card with supporting text below as a natural lead-in to additional
 									content. This card has even longer content than the first to show that equal height
 									action.
-								</p>
-								<p className="card-text">
-									<small className="text-muted" />
-								</p>
-							</div>
-						</div>
-					</div>
+								</Card.Text>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+					</CardDeck>
 				</div>
 				<div className="my-5">
 					<Button className="mx-5" variant="primary" size="lg">

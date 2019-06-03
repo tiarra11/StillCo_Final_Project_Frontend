@@ -1,16 +1,21 @@
 // @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
 // @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
-
+#stillLogo{
+   font-family: 'Dancing Script', cursive;
+}
+#stillT {
+ font-family: 'font-family: 'Cinzel', serif;'!important;
+}
 .s {
-    font-family: cursive;
+   font-family: 'Dancing Script', cursive;
 }
  
 .T {
-    font-family: 'Courier New';
+    font-family: 'font-family: 'Cinzel', serif;';
 }
 
 .ill{
-    font-family: cursive;
+   font-family: 'Dancing Script', cursive;
 }
 
 li.nav-item {
@@ -37,12 +42,18 @@ li.nav-item a {color:black}
 .imgshadow {
     border: 1px solid;
   padding: 10px;
-  box-shadow: 10px 10px black;
+  box-shadow: 10px 10px  black;
 }
 
 body{
     background-color:#fca800;
+    
 }
+
+.container {
+    background-color:#fca800;
+}
+
 
 .navcolor li{
     color:white
