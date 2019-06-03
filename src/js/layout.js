@@ -9,6 +9,8 @@ import { About } from "./views/about";
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { Login } from "./views/login";
+import { ALaCartPreScheduler } from "./views/aLaCartPreScheduler";
+import { Scheduler } from "./views/Scheduler";
 
 import { Footer } from "./component/footer";
 import { Contact } from "./views/contact";
@@ -37,6 +39,8 @@ export class Layout extends React.Component {
 							<Route exact path="/footer" component={Footer} />
 							<Route exact path="/contact" component={Contact} />
 							<Route exact path="/terms" component={Terms} />
+							<Route exact path="/prescheduler" component={ALaCartPreScheduler} />
+							<Route exact path="/scheduler" component={Scheduler} />
 
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
