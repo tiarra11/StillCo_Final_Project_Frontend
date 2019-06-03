@@ -32,15 +32,12 @@ export class Navbar extends React.Component {
 						<li className="nav-item mr-4">
 							<Link to="/Services">Services</Link>
 						</li>
-						<li className="nav-item mr-4">
+						{/* <li className="nav-item mr-4">
 							<Link to="/Contact">Contact</Link>
 						</li>
 						<li className="nav-item mr-4">
 							<Link to="/login">Collective</Link>
-						</li>
-						<li className="nav-item mr-4">
-							<Link to="/register">Register</Link>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 			</nav>
