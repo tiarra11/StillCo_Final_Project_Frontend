@@ -4,8 +4,8 @@ import ScrollToTop from "./component/scrollToTop";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
-import { Still } from "./views/still";
-import { About } from "./views/about";
+import { Still } from "./views/aboutStill";
+
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { Login } from "./views/login";
@@ -15,6 +15,8 @@ import { Scheduler } from "./views/scheduler";
 import { Footer } from "./component/footer";
 import { Contact } from "./views/contact";
 import { Terms } from "./views/termsConditions";
+import { Checkout } from "./views/checkout";
+import { Confirmation } from "./views/confirmation";
 
 // import { Single } from "./views/single";
 
@@ -32,7 +34,7 @@ export class Layout extends React.Component {
 						<Navbar />
 						<Switch>
 							<Route exact path="/" component={Still} />
-							<Route exact path="/about" component={About} />
+
 							<Route exact path="/portfolio" component={Portfolio} />
 							<Route exact path="/services" component={Services} />
 							<Route exact path="/login" component={Login} />
@@ -41,6 +43,8 @@ export class Layout extends React.Component {
 							<Route exact path="/terms" component={Terms} />
 							<Route exact path="/prescheduler" component={ALaCartPreScheduler} />
 							<Route exact path="/scheduler" component={Scheduler} />
+							<Route exact path="/checkout" component={Checkout} />
+							<Route exact path="/confirmation" component={Confirmation} />
 
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

@@ -40,6 +40,15 @@ const getState = ({ getStore, setStore }) => {
 					tcSectionBody:
 						'Last updated: November 10, 2015 sTill Collective ("us”, “we”, or “our”) operates the sTillCollective.com website (the “Service”). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service. We will not use or share your information with anyone except as described in this Privacy Policy. We use your Personal Information for providing and improving the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible at http://www.sTillCollective.com'
 				}
+			],
+
+			services: [
+				{
+					title: "Copywriting",
+					shortdescription: "Copywriting short description",
+					longdescription: "Copywriting long description",
+					cost: 400
+				}
 			]
 		},
 		actions: {
