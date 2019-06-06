@@ -1,6 +1,18 @@
 import React from "react";
 
 export class Still extends React.Component {
+	clicked = false;
+
+	unhide(e) {
+		document.querySelector("#aver").style.visibility = "visible";
+
+		e.target.style.cursor = "pointer";
+	}
+
+	// hide(e) {
+	// 	let
+	// }
+
 	render() {
 		return (
 			<div className="container bg-transparent mt-5">
@@ -11,16 +23,33 @@ export class Still extends React.Component {
 				/>
 
 				<div className="row">
-					<div className="col-md-12 text-center still">sTill</div>
+					<div className="col-md-12 text-center still">
+						<span
+							onMouseOver={this.unhide}
+							onMouseOut={() => {
+								if (!this.clicked) document.querySelector("#aver").style.visibility = "hidden";
+							}}
+							onClick={() => {
+								let arr = document.querySelectorAll(".hide");
+								for (let e of arr) {
+									e.style.visibility = "visible";
+								}
+								this.clicked = true;
+							}}>
+							sTill
+						</span>
+					</div>
 
-					<div className="col-md-12  text-center">Collective</div>
+					<div id="aver" className="hide col-md-12  text-center">
+						Collective
+					</div>
 				</div>
 
-				<div className="row text d-flex justify-content-center">
+				<div className="hide row text d-flex justify-content-center">
 					<div className="text">Digital</div>
 				</div>
 
-				<div className="row text d-flex justify-content-center ml-7">
+				<div className="hide row text d-flex justify-content-center ml-7">
 					<div className="col-2" />
 					<div className="col-3">Strategy</div>
 					<div className="col-3">Identity</div>
