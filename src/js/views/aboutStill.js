@@ -1,17 +1,13 @@
 import React from "react";
 
 export class Still extends React.Component {
-	clicked = false;
+	isItClicked = "not yet";
 
 	unhide(e) {
-		document.querySelector("#aver").style.visibility = "visible";
+		document.querySelector("#collective").style.visibility = "visible";
 
 		e.target.style.cursor = "pointer";
 	}
-
-	// hide(e) {
-	// 	let
-	// }
 
 	render() {
 		return (
@@ -27,20 +23,23 @@ export class Still extends React.Component {
 						<span
 							onMouseOver={this.unhide}
 							onMouseOut={() => {
-								if (!this.clicked) document.querySelector("#aver").style.visibility = "hidden";
+								if (this.isItClicked === "not yet") {
+									document.querySelector("#collective").style.visibility = "hidden";
+								}
 							}}
 							onClick={() => {
+								this.isItClicked = "now it is";
+
 								let arr = document.querySelectorAll(".hide");
 								for (let e of arr) {
 									e.style.visibility = "visible";
 								}
-								this.clicked = true;
 							}}>
 							sTill
 						</span>
 					</div>
 
-					<div id="aver" className="hide col-md-12  text-center">
+					<div id="collective" className="hide col-md-12  text-center">
 						Collective
 					</div>
 				</div>
