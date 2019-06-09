@@ -12,11 +12,11 @@ export class Still extends React.Component {
 	render() {
 		return (
 			<div className="container bg-transparent mt-5">
-				<img
+				{/* <img
 					src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDoteB8PiLzD6iehnMXHJsAH9aMIoxw2VTn0Zm_t4mEe8z6Hy5Eg"
 					className="rounded float-right imgshadow"
 					alt="..."
-				/>
+				/> */}
 
 				<div className="row">
 					<div className="col-md-12 text-center still">
