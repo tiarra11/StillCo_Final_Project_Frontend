@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export class Navbar extends React.Component {
+	// componentDidMount() {
+	// 	document.querySelector("nav").style.backgroundColor = "green";
+	// }
 	render() {
 		let path = window.location.pathname;
 		return (
@@ -20,7 +23,7 @@ export class Navbar extends React.Component {
 							</Link>
 						</li>
 					</ul>
-					{path}
+
 					<ul className="navbar-nav ml-auto">
 						<li className="nav-item mr-4">
 							<Link to="/portfolio">Portfolio</Link>
