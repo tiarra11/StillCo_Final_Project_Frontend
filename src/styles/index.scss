@@ -1,18 +1,28 @@
 // @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
 // @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 .stillLogoNav{
+   color:whitesmoke;
    font-family: 'Dancing Script', cursive;
    font-size:40px;
 }
 .stillTNav{
  font-family: 'Cinzel', serif;
-
+ color:whitesmoke;
 }
+.illpositioningNav{
+    position: relative;
+    bottom: 1px;
+}
+.sPositioningNav{
+    position: relative;
+    bottom: 2px;
+}
+
 .stillLogo{
    font-family: 'Dancing Script', cursive;
    color:whitesmoke;
-   font-size: 310px;
-   line-height: 200px;
+   font-size: 290px;
+   line-height: 150px;
 }
 .stillT{
  font-family: 'Cinzel', serif;
@@ -20,26 +30,41 @@
 
 .illpositioning {
     position: relative;
-    right: 55px;
+    right: 40px;
     bottom: 5px;
 }
 .sPositioning {
     position: relative;
-    left: 55px;
+    left: 40px;
     bottom: 15px;
 }
 
 
+.unHover:hover {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+a {
+    font-size:  15px;
+    color:white;
+}
+
 .hide {
     visibility: hidden;
 }
+
+
+
 
 li.nav-item {
     font-family: cursive;
     font-size: 1.4em;
 
 }
-li.nav-item a {color:black}
 .col-md.d-flex.justify-content-center {
     font-size: 5em;
     font-weight: 700;
@@ -138,11 +163,6 @@ color:black;
     font-weight: 700;
     line-height: 1em;
 }
-
-a {
-    font-size:  15px;
-    color:white;
-    }
 
 #p {
     font-size:  15px;
