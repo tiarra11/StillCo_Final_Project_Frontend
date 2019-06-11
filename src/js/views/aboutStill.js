@@ -19,7 +19,7 @@ export class Still extends React.Component {
 				/> */}
 
 				<div className="row">
-					<div className="col-md-12 text-center still">
+					<div className="stillLogo col-md-12 text-center">
 						<span
 							onMouseOver={this.unhide}
 							onMouseOut={() => {
@@ -35,7 +35,9 @@ export class Still extends React.Component {
 									e.style.visibility = "visible";
 								}
 							}}>
-							sTill
+							<span className="sPositioning">s</span>
+							<span className="stillT">T</span>
+							<span className="illpositioning">ill</span>
 						</span>
 					</div>
 

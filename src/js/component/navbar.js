@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<nav className="navbar navbar-expand-md navbar-light">
+			<nav className="hide navbar navbar-expand-md navbar-light">
 				<div className="navbar-collapse collapse" id="collapsingNavbar">
 					<ul className="navbar-nav">
 						<li className="nav-item mr-4">
-							<Link to="/" className="navcolor" id="stillLogo">
-								s<span id="stillT">T</span>
+							<Link to="/" className="stillLogNav navcolor">
+								s<span className="stillTNav">T</span>
 								ill
 							</Link>
 						</li>
