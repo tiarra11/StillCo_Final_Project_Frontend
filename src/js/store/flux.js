@@ -67,7 +67,9 @@ const getState = ({ getStore, setStore }) => {
 				}
 			]
 		},
-		actions: {}
+		actions: {
+			
+		}
 	};
 };
 
