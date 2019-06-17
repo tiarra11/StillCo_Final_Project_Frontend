@@ -68,7 +68,20 @@ const getState = ({ getStore, setStore }) => {
 			]
 		},
 		actions: {
-			
+			createClient: (name, email, password) => {
+				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
+				fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						name: name,
+						email: email,
+						password: password
+					})
+				});
+			}
 		}
 	};
 };
