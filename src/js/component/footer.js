@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
 	return (
 		<div className="m-auto">
-			<div className="hide row m-auto">
-				{/* <div className="footer mt-auto py-3 text-center" /> */}
+			<div className="hide row my-1">
 				<div className="footer-item text-center">
 					<Link to="/Contact">Contact</Link>
 				</div>

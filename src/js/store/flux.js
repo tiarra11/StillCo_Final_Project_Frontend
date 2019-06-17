@@ -71,18 +71,20 @@ const getState = ({ getStore, setStore }) => {
 			]
 		},
 		actions: {
-			// changeColor: (index, color) => {
-			// 	//get the store
-			// 	const store = getStore();
-			// 	//we have to loop the entire demo array to look for the respective index
-			// 	//and change its color
-			// 	const demo = store.demo.map((elm, i) => {
-			// 		if (i === index) elm.background = color;
-			// 		return elm;
-			// 	});
-			// 	//reset the global store
-			// 	setStore({ demo: demo });
-			// }
+			createClient: (name, email, password) => {
+				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
+				fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						name: name,
+						email: email,
+						password: password
+					})
+				});
+			}
 		}
 	};
 };

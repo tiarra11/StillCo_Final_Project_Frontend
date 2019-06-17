@@ -41,7 +41,7 @@ export class Still extends React.Component {
 						</span>
 					</div>
 
-					<div id="collective" className="hide col-md-12 text-center">
+					<div id="collective" className="hide col-md-12 py-5 text-center">
 						Collective
 					</div>
 				</div>
