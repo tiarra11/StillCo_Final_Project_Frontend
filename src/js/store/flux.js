@@ -4,22 +4,19 @@ const getState = ({ getStore, setStore }) => {
 			strategyCarouselContent: [
 				{
 					title: "sTrategy",
-					image:
-						"https://images.unsplash.com/photo-1559163206-6615672fad34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
 					header: "Plan. It. Out.",
 					info:
 						"We help you build trust with your customers, through a comprehensive layout of your business objectives and how to execute them."
 				},
 				{
 					title: "identiTy",
-					image:
-						"https://images.unsplash.com/photo-1529974445367-5b9bf0a0586e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3025&q=80",
+					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
 					info: "Design, Logos, and Websites."
 				},
 				{
 					title: "markeTing",
-					image:
-						"https://images.unsplash.com/photo-1506645292803-579c17d4ba6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
 					info: "Put yourself out there. We'll help you do that."
 				}
 			],
@@ -61,6 +58,12 @@ const getState = ({ getStore, setStore }) => {
 			services: [
 				{
 					title: "Copywriting",
+					shortdescription: "Copywriting short description",
+					longdescription: "Copywriting long description",
+					cost: 400
+				},
+				{
+					title: "Strategy",
 					shortdescription: "Copywriting short description",
 					longdescription: "Copywriting long description",
 					cost: 400

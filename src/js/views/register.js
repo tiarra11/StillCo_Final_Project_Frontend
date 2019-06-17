@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
-export class Login extends React.Component {
+export class Register extends React.Component {
 	constructor(...args) {
 		super(...args);
 
@@ -29,10 +29,20 @@ export class Login extends React.Component {
 		return (
 			<div>
 				<div className="text-center py-5">
-					<h1>The Collective</h1>
+					<h1>Join the Collective</h1>
 				</div>
 				<div className="d-flex justify-content-center">
 					<Form>
+						<Form.Group as={Row} controlId="formHorizontalEmail">
+							<Col>
+								<Form.Control type="text" placeholder="First Name" />
+							</Col>
+						</Form.Group>
+						<Form.Group as={Row} controlId="formHorizontalEmail">
+							<Col>
+								<Form.Control type="text" placeholder="Last Name" />
+							</Col>
+						</Form.Group>
 						<Form.Group as={Row} controlId="formHorizontalEmail">
 							<Col>
 								<Form.Control type="email" placeholder="Email" />
@@ -43,11 +53,16 @@ export class Login extends React.Component {
 								<Form.Control type="password" placeholder="Password" />
 							</Col>
 						</Form.Group>
+						<Form.Group as={Row} controlId="formHorizontalPassword">
+							<Col>
+								<Form.Control type="text" placeholder="Phone Number" />
+							</Col>
+						</Form.Group>
 						<Form.Group as={Row}>
 							<Col className="text-center">
-								<Button type="submit">Sign in</Button>
+								<Button type="submit">Register</Button>
 								<p>
-									Don’t have an account? <Link to="/register">Register now!</Link>.
+									Already have an account? <Link to="/login">Log in!</Link>.
 								</p>
 							</Col>
 						</Form.Group>

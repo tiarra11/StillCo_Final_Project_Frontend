@@ -34,7 +34,7 @@ class StrategyCarousel extends React.Component {
 							The content is comprised of the tem (for image), and a caption (for the blurb of info)*/}
 							<Carousel.Item>
 								<img
-									className="d-block w-100"
+									className="d-block"
 									src={store.strategyCarouselContent[0].image}
 									alt="First slide"
 								/>

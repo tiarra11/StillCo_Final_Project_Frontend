@@ -19,7 +19,7 @@ export class Still extends React.Component {
 				/> */}
 
 				<div className="row">
-					<div className="stillLogo col-md-12 text-center">
+					<div className="stillLogo col-md-12 text-center mb-5">
 						<span
 							onMouseOver={this.unhide}
 							onMouseOut={() => {
@@ -41,7 +41,7 @@ export class Still extends React.Component {
 						</span>
 					</div>
 
-					<div id="collective" className="hide col-md-12  text-center">
+					<div id="collective" className="hide col-md-12 text-center">
 						Collective
 					</div>
 				</div>

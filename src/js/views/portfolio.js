@@ -8,7 +8,7 @@ import MarketingCarousel from "./marketingCarousel.js";
 export class Portfolio extends React.Component {
 	render() {
 		return (
-			<div className="container text-center">
+			<div className="container">
 				{/*
 				//This commented out header was Hernan's way of explaining how to create the "sTill" logo with two different fonts.
 				<h1>
@@ -18,12 +18,12 @@ export class Portfolio extends React.Component {
 				</h1> */}
 				<div className="row">
 					<StrategyCarousel />
-				</div>
+					{/*</div>
 				<div className="row my-5">
 					<IdentityCarousel />
 				</div>
 				<div className="row">
-					<MarketingCarousel />
+					<MarketingCarousel />*/}
 				</div>
 			</div>
 		);

@@ -37,6 +37,14 @@ export class Services extends React.Component {
 												<a href="#" className="btn btn-primary">
 													Juuuuust $ {store.services[0].cost}
 												</a>
+
+												<h3>{store.services[1].title}</h3>
+												<p className="card-text">{store.services[1].longdescription}</p>
+												<p>{store.services[1].shortdescription}</p>
+
+												<a href="#" className="btn btn-primary">
+													Juuuuust $ {store.services[1].cost}
+												</a>
 											</div>
 										</div>
 									</div>
