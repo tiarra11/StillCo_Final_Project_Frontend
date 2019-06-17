@@ -12,7 +12,7 @@ export class Services extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="container">
+				<div className="container rounded-0">
 					<div>
 						<h2>What your brand needs– How you want.</h2>
 						<p id="servicesSectionBlurb">
@@ -23,18 +23,39 @@ export class Services extends React.Component {
 						</p>
 						<p id="servicesSectionBlurb">Choose from these options (select all that apply):</p>
 					</div>
+					<Context.Consumer>
+						{({ store }) => {
+							return (
+								<div className="row">
+									<div className="col-sm-6">
+										<div className="card">
+											<div className="card-body">
+												<h3>{store.services[0].title}</h3>
+												<p className="card-text">{store.services[0].shortdescription}</p>
+
+												<a href="#" className="btn btn-primary">
+													Juuuuust $ {store.services[0].cost}
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							);
+						}}
+					</Context.Consumer>
+
 					<div className="mb-2 d-flex justify-content-center">
 						<h3>Strategy</h3>
 					</div>
 					<div className="row d-flex justify-content-center m-auto">
 						<Button className="mx-5" variant="primary" size="lg">
-							Objective/ Action Planning
+							Organizational Analysis
 						</Button>
 						<Button className="mx-5" variant="primary" size="lg">
-							Copywriting
+							Action Planning
 						</Button>
 						<Button className="mx-5" variant="primary" size="lg">
-							Product Design
+							Corporate Re-Branding
 						</Button>
 					</div>
 					<div className="mb-2 mt-5 d-flex justify-content-center">
@@ -48,7 +69,7 @@ export class Services extends React.Component {
 							Website Design
 						</Button>
 						<Button className="mx-5" variant="primary" size="lg">
-							Photography
+							Product Design
 						</Button>
 					</div>
 					<div className="mb-2 mt-5 d-flex justify-content-center">
@@ -65,49 +86,79 @@ export class Services extends React.Component {
 							Social Media Management
 						</Button>
 					</div>
+					<div className="mb-5" />
 				</div>
-				<div className="row mx-auto my-5">
-					<CardDeck>
-						<Card>
-							<Card.Header>Featured</Card.Header>
-							<Card.Body>
-								<Card.Title>Card title</Card.Title>
-								<Card.Text>
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
-								</Card.Text>
-							</Card.Body>
-							<Card.Footer>
-								<small className="text-muted">Last updated 3 mins ago</small>
-							</Card.Footer>
-						</Card>
-						<Card>
-							<Card.Header>Featured</Card.Header>
-							<Card.Body>
-								<Card.Title>Card title</Card.Title>
-								<Card.Text>
-									This card has supporting text below as a natural lead-in to additional content.{" "}
-								</Card.Text>
-							</Card.Body>
-							<Card.Footer>
-								<small className="text-muted">Last updated 3 mins ago</small>
-							</Card.Footer>
-						</Card>
-						<Card>
-							<Card.Header>Featured</Card.Header>
-							<Card.Body>
-								<Card.Title>Card title</Card.Title>
-								<Card.Text>
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This card has even longer content than the first to show that equal height
-									action.
-								</Card.Text>
-							</Card.Body>
-							<Card.Footer>
-								<small className="text-muted">Last updated 3 mins ago</small>
-							</Card.Footer>
-						</Card>
-					</CardDeck>
+				<div className="container my-5">
+					<div className="card-deck">
+						<div className="card">
+							<img src="" className="card-img-top" alt="..." />
+							<div className="card-body">
+								<h5 className="card-title">sTill Standard</h5>
+								<p className="card-text" />
+								This package includes:
+								<ul>
+									<li>Logo Design</li>
+									<li>Re-Branding</li>
+									<li>Website Design</li>
+									<li>Objective Planning</li>
+								</ul>
+								<p className="card-text">
+									<small className="text-muted" />
+								</p>
+							</div>
+						</div>
+						<div className="card">
+							<img
+								src={
+									"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ7_OHpyvDWvYNiQkJ9rYs798JMRXnQaC7nOw1zMelWMHEa8YAMQ"
+								}
+								className="card-img-top"
+								alt="..."
+							/>
+							<div className="card-body">
+								<h5 className="card-title">Supreme Collective Package</h5>
+								<p className="card-text">Our Collective Package entails the following services.</p>
+								<ul>
+									<li>Logo Design</li>
+									<li>Re-Branding</li>
+									<li>Website Design</li>
+									<li>Objective Planning</li>
+									<li>4 Consultation / Progress Meetings</li>
+
+									<li>Advertising</li>
+									<li>SEO</li>
+									<li>Social Media Management</li>
+									<li>Content Development</li>
+									<li>Photography</li>
+								</ul>
+
+								<p className="card-text">
+									<small className="text-muted" />
+								</p>
+							</div>
+						</div>
+						<div className="card">
+							<img src="..." className="card-img-top" alt="..." />
+							<div className="card-body">
+								<h5 className="card-title">Savvy Package</h5>
+								<p className="card-text">The Platinum Package includes:</p>
+								<ul>
+									<li>Logo Design</li>
+									<li>Re-Branding</li>
+									<li>Website Design</li>
+									<li>Objective Planning</li>
+									<li>4 Consultation / Progress Meetings</li>
+									<li>Marketing</li>
+									<li>Advertising</li>
+									<li>SEO</li>
+									<li>Social Media Management</li>
+								</ul>
+								<p className="card-text">
+									<small className="text-muted" />
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div className="my-5">
 					<Button className="mx-5" variant="primary" size="lg">

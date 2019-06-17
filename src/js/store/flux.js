@@ -55,18 +55,54 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 
-			services: [
+			strategy: [
 				{
-					title: "Copywriting",
-					shortdescription: "Copywriting short description",
-					longdescription: "Copywriting long description",
-					cost: 400
+					name: "Organizational Analysis",
+					description: "j"
 				},
 				{
-					title: "Strategy",
-					shortdescription: "Copywriting short description",
-					longdescription: "Copywriting long description",
-					cost: 400
+					name: "	Action Planning",
+					description:
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+				},
+				{
+					name: "Corporate Re-Branding",
+					description:
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+				}
+			],
+			identity: [
+				{
+					name: "logo design",
+					description:
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+				},
+				{
+					name: "website design",
+					description:
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+				},
+				{
+					name: "product design",
+					description:
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+				}
+			],
+			marketing: [
+				{
+					name: "Advertising",
+					description:
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+				},
+				{
+					name: "Seo",
+					description:
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+				},
+				{
+					name: "Social Media Managment",
+					description:
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				}
 			]
 		},

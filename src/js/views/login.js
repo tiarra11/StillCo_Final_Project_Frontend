@@ -11,33 +11,6 @@ import { Context } from "../store/appContext";
 export class Login extends React.Component {
 	render() {
 		return (
-			<div>
-				<div className="text-center py-5">
-					<h1>The Collective</h1>
-				</div>
-				<div className="d-flex justify-content-center">
-					<Form>
-						<Form.Group as={Row} controlId="formHorizontalEmail">
-							<Col>
-								<Form.Control type="email" placeholder="Email" />
-							</Col>
-						</Form.Group>
-						<Form.Group as={Row} controlId="formHorizontalPassword">
-							<Col>
-								<Form.Control type="password" placeholder="Password" />
-							</Col>
-						</Form.Group>
-						<Form.Group as={Row}>
-							<Col className="text-center">
-								<Button type="submit">Sign in</Button>
-								<p>
-									Don’t have an account? <Link to="/register">Register now!</Link>.
-								</p>
-							</Col>
-						</Form.Group>
-					</Form>
-				</div>
-			</div>
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
@@ -46,50 +19,23 @@ export class Login extends React.Component {
 								<h1>The Collective</h1>
 							</div>
 							<div className="d-flex justify-content-center">
-								{/* <Form>
-									<Form.Group as={Row} controlId="formHorizontalEmail">
-										<Col sm={75}>
-											<Form.Control type="email" placeholder="Email" />
-										</Col>
-									</Form.Group>
-									<Form.Group as={Row} controlId="formHorizontalPassword">
-										<Col lg={75}>
-											<Form.Control type="password" placeholder="Password" />
-										</Col>
-									</Form.Group>
-									<Form.Group as={Row}>
-										<Col sm={{ span: 20, offset: 3 }}>
-											<Button>Sign in</Button>
-										</Col>
-									</Form.Group>
-								</Form> */}
 								<Form>
-									<Form.Group as={Row} controlId="formHorizontalName">
-										<Col sm={75}>
-											<Form.Control type="name" placeholder="Name" />
-										</Col>
-									</Form.Group>
 									<Form.Group as={Row} controlId="formHorizontalEmail">
-										<Col sm={75}>
+										<Col>
 											<Form.Control type="email" placeholder="Email" />
 										</Col>
 									</Form.Group>
 									<Form.Group as={Row} controlId="formHorizontalPassword">
-										<Col lg={75}>
+										<Col>
 											<Form.Control type="password" placeholder="Password" />
 										</Col>
 									</Form.Group>
 									<Form.Group as={Row}>
-										<Col sm={{ span: 20, offset: 3 }}>
-											<Button
-												onClick={() => {
-													let name = document.querySelector("[type=name]").value;
-													let email = document.querySelector("[type=email]").value;
-													let password = document.querySelector("[type=password]").value;
-													actions.createClient(name, email, password);
-												}}>
-												Create Account
-											</Button>
+										<Col className="text-center">
+											<Button type="submit">Sign in</Button>
+											<p>
+												Don’t have an account? <Link to="/register">Register now!</Link>.
+											</p>
 										</Col>
 									</Form.Group>
 								</Form>
@@ -101,5 +47,3 @@ export class Login extends React.Component {
 		);
 	}
 }
-
-// render(<FormExample />);
