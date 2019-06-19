@@ -15,14 +15,19 @@ export class Services extends React.Component {
 				<div className="container rounded-0 bg-red ">
 					<div className="row">
 						<div className="col-md-4">
-							<h2 className="text-center">Strategy</h2>
+							<h2 className="text-center maintitle1">StraTegy</h2>
+
 							<Context.Consumer>
 								{({ store, strategy }) => {
 									return store.strategy.map((item, index) => {
 										return (
 											<div key={index} className="card col-12 my-4 servicecard2">
 												<div className="card-body">
-													<p className="card-text servicetext">{item.name} +</p>
+													<p className="card-text servicetext">{item.name} </p>
+
+													<p className="card-text servicetext">
+														{item.price} <i className="fas fa-plus-circle" />
+													</p>
 												</div>
 											</div>
 										);
@@ -32,7 +37,7 @@ export class Services extends React.Component {
 						</div>
 
 						<div className="col-md-4">
-							<h2 className="text-center">Identity</h2>
+							<h2 className="text-center maintitle2">Identity</h2>
 							<Context.Consumer>
 								{({ store, identity }) => {
 									return store.identity.map((item, index) => {
@@ -49,7 +54,7 @@ export class Services extends React.Component {
 						</div>
 
 						<div className="col-md-4">
-							<h2 className="text-center">Marketing</h2>
+							<h2 className="text-center maintitle3">Marketing</h2>
 							<Context.Consumer>
 								{({ store, marketing }) => {
 									return store.marketing.map((item, index) => {
@@ -134,7 +139,7 @@ export class Services extends React.Component {
 					</div>
 				</div>
 				<div className="my-5">
-					<Button className="mx-5" variant="primary" size="lg">
+					<Button className="mx-5" variant="primary" size="lg" s>
 						<Link to="/login">Let&apos;t Optimize Your Brand</Link>
 					</Button>
 				</div>

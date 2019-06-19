@@ -58,17 +58,20 @@ const getState = ({ getStore, setStore }) => {
 			strategy: [
 				{
 					name: "Organizational Analysis",
-					description: "j"
+					description: "j",
+					price: 200
 				},
 				{
 					name: "	Action Planning",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 200
 				},
 				{
 					name: "Corporate Re-Branding",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 200
 				}
 			],
 			identity: [
