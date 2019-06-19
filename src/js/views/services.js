@@ -12,72 +12,67 @@ export class Services extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="container rounded-0">
-					<h2>Strategy</h2>
-					<p id="servicesSectionBlurb">
-						Are you missing the feature that is going to take your brand to the next level? We can help with
-						that. The sTill Collective offers on demand access to a wide range of highly experienced
-						professionals in their respective fields and beyond. And you don&apos;t even need to leave your
-						office.
-					</p>
-					<div className="card-deck">
-						<Context.Consumer>
-							{({ store, strategy }) => {
-								return store.strategy.map((item, index) => {
-									return (
-										<div key={index} className="card col-4">
-											<div className="card-body">
-												<p className="card-text">{item.name}</p>
+				<div className="container rounded-0 bg-red ">
+					<div className="row">
+						<div className="col-md-4">
+							<h2 className="text-center">Strategy</h2>
+							<Context.Consumer>
+								{({ store, strategy }) => {
+									return store.strategy.map((item, index) => {
+										return (
+											<div key={index} className="card col-12 my-4 servicecard2">
+												<div className="card-body">
+													<p className="card-text servicetext">{item.name} +</p>
+												</div>
 											</div>
-										</div>
-									);
-								});
-							}}
-						</Context.Consumer>
-					</div>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
 
-					<h2>Identity</h2>
-
-					<div className="card-deck">
-						<Context.Consumer>
-							{({ store, identity }) => {
-								return store.identity.map((item, index) => {
-									return (
-										<div key={index} className="card col-4">
-											<div className="card-body">
-												<p className="card-text">{item.name}</p>
+						<div className="col-md-4">
+							<h2 className="text-center">Identity</h2>
+							<Context.Consumer>
+								{({ store, identity }) => {
+									return store.identity.map((item, index) => {
+										return (
+											<div key={index} className="card col-12 my-4 servicecard2">
+												<div className="card-body">
+													<p className="card-text servicetext">{item.name}</p>
+												</div>
 											</div>
-										</div>
-									);
-								});
-							}}
-						</Context.Consumer>
-					</div>
-					<h2>Marketing</h2>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
 
-					<div className="card-deck">
-						<Context.Consumer>
-							{({ store, marketing }) => {
-								return store.marketing.map((item, index) => {
-									return (
-										<div key={index} className="card col-4">
-											<div className="card-body">
-												<p className="card-text">{item.name}</p>
+						<div className="col-md-4">
+							<h2 className="text-center">Marketing</h2>
+							<Context.Consumer>
+								{({ store, marketing }) => {
+									return store.marketing.map((item, index) => {
+										return (
+											<div key={index} className="card col-12 my-4 servicecard2">
+												<div className="card-body">
+													<p className="card-text servicetext">{item.name}</p>
+												</div>
 											</div>
-										</div>
-									);
-								});
-							}}
-						</Context.Consumer>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
 					</div>
-
-					<div className="mb-5" />
 				</div>
-				<div className="container my-5">
+
+				<div className="container rounded-0 my-5 bg-red">
 					<div className="card-deck">
-						<div className="card">
+						<div className="card bg-details1">
 							<div className="card-body">
 								<h5 className="card-title">sTill Standard</h5>
+								<hr />
 								<p className="card-text" />
 								This package includes:
 								<ul>
@@ -91,9 +86,10 @@ export class Services extends React.Component {
 								</p>
 							</div>
 						</div>
-						<div className="card">
+						<div className="card bg-details2">
 							<div className="card-body">
 								<h5 className="card-title">Supreme Collective Package</h5>
+								<hr />
 								<p className="card-text">Our Collective Package entails the following services.</p>
 								<ul>
 									<li>Logo Design</li>
@@ -114,9 +110,10 @@ export class Services extends React.Component {
 								</p>
 							</div>
 						</div>
-						<div className="card">
+						<div className="card bg-details3">
 							<div className="card-body">
-								<h5 className="card-title">Savvy Package</h5>
+								<h5 className="card-title">Savage Package</h5>
+								<hr />
 								<p className="card-text">The Platinum Package includes:</p>
 								<ul>
 									<li>Logo Design</li>

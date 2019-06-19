@@ -22,7 +22,7 @@ export class Scheduler extends React.Component {
 				</ListGroup>
 				<div className="form-check">
 					<input
-						className="form-check-input position-static"
+						className="form-check-input"
 						type="radio"
 						name="blankRadio"
 						id="blankRadio1"
@@ -33,7 +33,7 @@ export class Scheduler extends React.Component {
 						Phone Call
 					</label>
 					<input
-						className="form-check-input position-static"
+						className="form-check-input"
 						type="radio"
 						name="blankRadio"
 						id="blankRadio1"

@@ -164,18 +164,40 @@ input[type=submit]:hover {
     font-weight: 500;
 }
 
+.bg-red {
+    background-color:rgb(255, 255, 255);
+        border: 5px solid black;
+        border-radius: 25px;
 
+}
 
+.servicecard2 {
+    background-color: rgb(109, 108, 108);
+}
 
+.servicetext {
+color:white;
+}
 
+.bg-details1 {
+    background-color: rgb(109, 108, 108);
+    color: white;
+    
+}
+.bg-details2 {
+    background-color:rgb(155, 153, 153);
+    color: white;
+    
+}
+.bg-details3 {
+    background-color: rgb(204, 201, 201);
+    color: white;
+}
 
-
-
-
-
-
-
-
+hr-white {
+    color: white;
+    border:10px;
+}
 
 
 // .backgrounddiv {

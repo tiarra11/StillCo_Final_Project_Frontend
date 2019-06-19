@@ -23,6 +23,7 @@ export class Services extends React.Component {
 						</p>
 						<p id="servicesSectionBlurb">Choose from these options (select all that apply):</p>
 					</div>
+                    
 					<Context.Consumer>
 						{({ store }) => {
 							return (
@@ -32,6 +33,7 @@ export class Services extends React.Component {
 											<div className="card-body">
 												<h3>{store.services[0].title}</h3>
 												<p className="card-text">{store.services[0].shortdescription}</p>
+                                                
 
 												<a href="#" className="btn btn-primary">
 													Juuuuust $ {store.services[0].cost}
