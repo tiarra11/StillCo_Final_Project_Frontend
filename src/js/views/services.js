@@ -18,10 +18,22 @@ export class Services extends React.Component {
 							<h2 className="text-center maintitle1">StraTegy</h2>
 
 							<Context.Consumer>
-								{({ store, strategy }) => {
+								{({ store }) => {
 									return store.strategy.map((item, index) => {
 										return (
-											<div key={index} className="card col-12 my-4 servicecard2">
+											<div
+												key={index}
+												className="card col-12 my-4 servicecard2"
+												onClick={() =>
+													alert(
+														"Name: " +
+															item.name +
+															"\nDescription: " +
+															item.description +
+															"\nPrice: " +
+															item.price
+													)
+												}>
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name} </p>
 
@@ -39,7 +51,7 @@ export class Services extends React.Component {
 						<div className="col-md-4">
 							<h2 className="text-center maintitle2">Identity</h2>
 							<Context.Consumer>
-								{({ store, identity }) => {
+								{({ store }) => {
 									return store.identity.map((item, index) => {
 										return (
 											<div key={index} className="card col-12 my-4 servicecard2">
@@ -56,7 +68,7 @@ export class Services extends React.Component {
 						<div className="col-md-4">
 							<h2 className="text-center maintitle3">Marketing</h2>
 							<Context.Consumer>
-								{({ store, marketing }) => {
+								{({ store }) => {
 									return store.marketing.map((item, index) => {
 										return (
 											<div key={index} className="card col-12 my-4 servicecard2">

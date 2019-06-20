@@ -59,19 +59,22 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "Organizational Analysis",
 					description: "j",
-					price: 200
+					price: 200,
+					rep: "martin"
 				},
 				{
 					name: "	Action Planning",
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 200
+					price: 200,
+					rep: "joao"
 				},
 				{
 					name: "Corporate Re-Branding",
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 200
+					price: 200,
+					rep: "hernan"
 				}
 			],
 			identity: [
@@ -110,19 +113,44 @@ const getState = ({ getStore, setStore }) => {
 			]
 		},
 		actions: {
-			createClient: (name, email, password) => {
+			createClient: (name, email, password, history) => {
 				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
 				fetch(url, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json"
 					},
+
 					body: JSON.stringify({
 						name: name,
 						email: email,
 						password: password
 					})
 				});
+				// .then(resp => resp.json())
+				// .then(data => {
+				// 	console.log("Account Successfully Created", JSON.stringify(data));
+				// 	// history.push("/dashboard");
+				// })
+				// .catch(error => console.error("Error:", error));
+			},
+			generateOrder: selected_services => {
+				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/orders";
+				fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						selected_services: selected_services
+					})
+				});
+				// .then(resp => resp.json())
+				// .then(data => {
+				// 	console.log("Account Successfully Created", JSON.stringify(data));
+				// 	history.push("/dashboard");
+				// })
+				// .catch(error => console.error("Error:", error));
 			}
 		}
 	};
