@@ -42,16 +42,16 @@ export class Still extends React.Component {
 							</span>
 						</div>
 
-						<div id="collective" className="hide col-md-12 py-5 text-center">
-							COLLECTIVE
+						<div id="collective" className="hide col-md-12 pt-2 pb-5 text-center">
+							C O L L E C T I V E
 						</div>
 					</div>
 
 					<div className="hide row text d-flex justify-content-center ml-7 SIM">
 						<div className="col-2" />
-						<div className="col-3">Strategy</div>
-						<div className="col-3">Identity</div>
-						<div className="col-3">Marketing</div>
+						<div className="col-3">STRATEGY</div>
+						<div className="col-3">IDENTITY</div>
+						<div className="col-3">MARKETING</div>
 						<div className="col-0" />
 					</div>
 
@@ -64,9 +64,11 @@ export class Still extends React.Component {
 				</div>
 				<div className="container-fluid pt-5">
 					<div className="row">
-						<div className=" hide  col-md-6 text-center about m-auto">
-							Still &amp; Co wants to give you the sTill experience your brand needs. We have a small team
-							of creative artists that will expand your brand to a savvy company.
+						<div className=" hide col-md-12 text-center about m-auto">
+							<div className="aboutus">
+								Still &amp; Co wants to give you the sTill experience your brand needs. We have a small
+								team of creative artists that will expand your brand to a savvy company.
+							</div>
 						</div>
 					</div>
 				</div>
