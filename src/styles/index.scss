@@ -68,9 +68,10 @@ a {
 }
 
 
-#Collective{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size:  35px;
+#collective{
+    font-family:'Cinzel', serif;
+    font-size: 36px;
+
 }
 
 li.nav-item {
@@ -229,10 +230,21 @@ hr-white {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.foot a {
+    font-size: 15px;
+}
 
+.about {
+    font-size: 24px;
+    background-color: white;
+    border:2px solid black;
+    padding: 38px;
 
+}
 
-
+.SIM {
+ font-family: 'Josefin Sans', sans-serif;
+}
 
 // .backgrounddiv {
 //     height: 400px;

@@ -25,7 +25,7 @@ export class Still extends React.Component {
 								onMouseOver={this.unhide}
 								onMouseOut={() => {
 									if (this.isItClicked === "not yet") {
-										document.querySelector("#collective").style.visibility = "hidden";
+										document.querySelector("#Collective").style.visibility = "hidden";
 									}
 								}}
 								onClick={() => {
@@ -42,12 +42,12 @@ export class Still extends React.Component {
 							</span>
 						</div>
 
-						<div id="collective" className="hide col-md-12 py-5 text-center">
-							COLLECTIVE
+						<div id="Collective" className="hide col-md-12 py-5 text-center">
+							Collective
 						</div>
 					</div>
 
-					<div className="hide row text d-flex justify-content-center ml-7 SIM">
+					<div className="hide row text d-flex justify-content-center ml-7">
 						<div className="col-2" />
 						<div className="col-3">Strategy</div>
 						<div className="col-3">Identity</div>
@@ -64,10 +64,11 @@ export class Still extends React.Component {
 				</div>
 				<div className="container-fluid pt-5">
 					<div className="row">
-						<div className=" hide  col-md-6 text-center about m-auto">
-							Still &amp; Co wants to give you the sTill experience your brand needs. We have a small team
-							of creative artists that will expand your brand to a savvy company.
+						<div className="col-9 aboutleft">
+							About Us Still &amp; Co wants to give you the sTill experience your brand needs. We have a
+							small team of creative artists that will expand your brand to a savvy company.
 						</div>
+						<div className="col-3 aboutright" />
 					</div>
 				</div>
 			</div>
