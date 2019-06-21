@@ -24,7 +24,7 @@ export class Services extends React.Component {
 				<div className="container rounded-0 bg-red ">
 					<div className="row">
 						<div className="col-md-4">
-							<h2 className="text-center maintitle1">StraTegy</h2>
+							<h2 className="text-center maintitle1">Strategy</h2>
 
 							<Context.Consumer>
 								{({ store }) => {

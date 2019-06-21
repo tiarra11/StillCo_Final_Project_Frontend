@@ -1,84 +1,102 @@
 // @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
 // @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
-.stillLogoNav{
-   color:whitesmoke;
-   font-family: 'Dancing Script', cursive;
-   font-size:40px;
-}
-.stillTNav{
- font-family: 'Cinzel', serif;
- color:whitesmoke;
-}
-.illpositioningNav{
-    position: relative;
-    bottom: 1px;
-}
-.sPositioningNav{
-    position: relative;
-    bottom: 2px;
-}
-
-.stillLogo{
-   font-family: 'Dancing Script', cursive;
-   color:whitesmoke;
-   font-size: 290px;
-   line-height: 150px;
-}
-.stillT{
- font-family: 'Cinzel', serif;
-}
-
-.illpositioning {
-    position: relative;
-    right: 40px;
-    bottom: 5px;
-}
-.sPositioning {
-    position: relative;
-    left: 40px;
-    bottom: 15px;
-}
 
 
-.unHover:hover {
-    color: white;
-        padding: 0px;
+//STILL NAVBAR STYLIZING
+    //Still Homepage link (Top-Left Corner Link)
+        .stillLogoNav{
+        color:whitesmoke;
+        font-family: 'Dancing Script', cursive;
+        font-size:40px;
+        }
 
-}
+        .stillLogoNav:hover {
+            color: black;
+            text-decoration: none;
+
+        }
+        #stillTNav:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        #stillTNav{
+        font-family: 'Cinzel', serif;
+        color:whitesmoke;
+
+        }
+        #illpositioningNav{
+            position: relative;
+            bottom: 1px;
+        }
+        #sPositioningNav{
+            position: relative;
+            bottom: 2px;
+        }
+    //Other Navbar Links
+        .navbarlink {
+            font-size:  20px;
+            color:white;
+        }
+
+        .navbarlink:hover {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .navlink {
+            font-size:290px
+
+        }
+
+        li.nav-item {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4em;
+        }
+
+        .navcolor li{
+            color:white
+        }
+
+//Center of "About/Homepage"
+    //Main Still Logo (The one in the center of the "About" Page)
+            .stillLogo{
+            font-family: 'Dancing Script', cursive;
+            color:whitesmoke;
+            font-size: 290px;
+            line-height: 150px;
+            }
+
+            .stillT{
+            font-family: 'Cinzel', serif;
+            }
+
+            .illpositioning {
+                position: relative;
+                right: 40px;
+                bottom: 5px;
+            }
+            .sPositioning {
+                position: relative;
+                left: 40px;
+                bottom: 15px;
+            }
 
 
 
-.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: black;
-
-}
-.navlink {
-    font-size:290px
-}
+    .hide {
+        visibility: hidden;
+    }
 
 
+    #collective{
+        font-family:'Josefin Sans', sans-serif;
+        font-size: 42px;
 
-a {
-    font-size:  30px;
-    color:white;
-}
-
-.hide {
-    visibility: hidden;
-}
+    }
 
 
-#Collective{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size:  35px;
-}
-
-li.nav-item {
-    font-family: cursive;
-    font-size: 1.4em;
-
-
-}
 .col-md.d-flex.justify-content-center {
     font-size: 5em;
     font-weight: 700;
@@ -92,8 +110,7 @@ li.nav-item {
 }
 
 body{
-    background-color:#fca800;
-
+        background: linear-gradient(249deg, #f3a201e0 38%, #f5a80f 70%);
 }
 
 .aboutleft {
@@ -106,17 +123,9 @@ body{
     background-color: orange;
 }
 
-.navcolor li{
-    color:white
-}
 
-.verticaltext{
-    transform: rotate(90deg);
-    transform-origin: top left;
-    margin-left: 4rem;
-    color: #852c98;
 
-}
+
 
 .text{
     font-size:  25px;
@@ -161,11 +170,9 @@ input[type=submit]:hover {
     padding: 20px;
 }
 .footer-item {
-    font-family: cursive;
     font-size: 1.4em;
-
-}
-.footer-item a {color:black
+    color:black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .col-md.d-flex.justify-content-center {
@@ -229,10 +236,28 @@ hr-white {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.foot a {
+    font-size: 15px;
+}
 
+.about {
+    font-size: 24px;
+    background-color: white;
+    border-bottom:1px solid black;
+    padding: 38px;
 
+}
 
-
+.SIM {
+ font-family: 'Josefin Sans', sans-serif;
+ font-size:22px;
+}
+.aboutus {
+    width: 50%;
+    margin:auto;
+     font-family: 'Josefin Sans', sans-serif;
+      border-bottom: double;
+}
 
 // .backgrounddiv {
 //     height: 400px;
@@ -243,3 +268,17 @@ hr-white {
 //     top: -100px;
 
 // }
+//Unused Navbar Styling (This styling code was messing stuff up, or not giving the desired look)
+        // .unHover:hover {
+        //     color: white;
+        //         padding: 0px;
+        // }
+
+        // .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        //     color: black;
+        // }
+
+        // // a {
+        // //     font-size:  30px;
+        // //     color:white;
+        // }
