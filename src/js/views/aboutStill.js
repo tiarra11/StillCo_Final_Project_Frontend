@@ -42,17 +42,17 @@ export class Still extends React.Component {
 							</span>
 						</div>
 
-						<div id="collective" className="hide col-md-12 pt-1 pb-5 text-center">
+						<div id="collective" className="col-md-12 pt-1 pb-5 text-center elegantshadow fadein">
 							C O L L E C T I V E
 						</div>
 					</div>
 
-					<div className="hide row text d-flex justify-content-center ml-7 SIM">
-						<div className="col-2" />
-						<div className="col-3">STRATEGY</div>
-						<div className="col-3">IDENTITY</div>
-						<div className="col-3">MARKETING</div>
-						<div className="col-0" />
+					<div className="fadein row text d-flex justify-content-center ml-7 SIM">
+						<div className="col" />
+						<div className="col-2">STRATEGY</div>
+						<div className="col-2">IDENTITY</div>
+						<div className="col-2">MARKETING</div>
+						<div className="col" />
 					</div>
 
 					{/*
@@ -64,7 +64,7 @@ export class Still extends React.Component {
 				</div>
 				<div className="container-fluid pt-5">
 					<div className="row">
-						<div className=" hide col-md-12 text-center about m-auto">
+						<div className="fadein col-md-12 text-center about m-auto">
 							<div className="aboutus">
 								STill &amp; Co wants to give you the sTill experience your brand needs. We have a small
 								team of creative artists that will expand your brand to a savvy company.
