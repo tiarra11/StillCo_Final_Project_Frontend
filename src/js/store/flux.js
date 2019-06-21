@@ -110,9 +110,11 @@ const getState = ({ getStore, setStore }) => {
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				}
-			]
+			],
+			login: []
 		},
 		actions: {
+			authenticateLogin: () => {},
 			createClient: (name, email, password, history) => {
 				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
 				fetch(url, {

@@ -7,6 +7,15 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 import "../../styles/index.scss";
+import { Session } from "bc-react-session";
+
+Session.start({
+	payload: {
+		name: [],
+		price: []
+	},
+	expiration: 86400000
+});
 
 export class Services extends React.Component {
 	render() {
@@ -21,20 +30,19 @@ export class Services extends React.Component {
 								{({ store }) => {
 									return store.strategy.map((item, index) => {
 										return (
-											<div
-												key={index}
-												className="card col-12 my-4 servicecard2"
-												onClick={() =>
-													alert(
-														"Name: " +
-															item.name +
-															"\nDescription: " +
-															item.description +
-															"\nPrice: " +
-															item.price
-													)
-												}>
-												<div className="card-body">
+											<div key={index} className="card col-12 my-4 servicecard2">
+												<div
+													className="card-body"
+													onClick={() => {
+														let { payload } = Session.get();
+														Session.setPayload({ name: item.name, price: item.price });
+														// let session = Session.get();
+														alert(
+															Session.get().payload.name +
+																" " +
+																Session.get().payload.price
+														);
+													}}>
 													<p className="card-text servicetext">{item.name} </p>
 
 													<p className="card-text servicetext">
