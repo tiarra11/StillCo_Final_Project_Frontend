@@ -15,7 +15,7 @@ import { Scheduler } from "./views/scheduler";
 
 import { Footer } from "./component/footer";
 import { Contact } from "./views/contact";
-import { Terms } from "./views/termsConditions";
+import { Terms } from "./views/termsconditions";
 import { Checkout } from "./views/checkout";
 import { Confirmation } from "./views/confirmation";
 

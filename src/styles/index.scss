@@ -1,101 +1,234 @@
 // @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
 // @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 
-
-//STILL NAVBAR STYLIZING
-    //Still Homepage link (Top-Left Corner Link)
-        .stillLogoNav{
-        color:whitesmoke;
-        font-family: 'Dancing Script', cursive;
-        font-size:40px;
-        }
-
-        .stillLogoNav:hover {
-            color: black;
-            text-decoration: none;
-
-        }
-        #stillTNav:hover {
-            color: black;
-            text-decoration: none;
-        }
-
-        #stillTNav{
-        font-family: 'Cinzel', serif;
-        color:whitesmoke;
-
-        }
-        #illpositioningNav{
-            position: relative;
-            bottom: 1px;
-        }
-        #sPositioningNav{
-            position: relative;
-            bottom: 2px;
-        }
-    //Other Navbar Links
-        .navbarlink {
-            font-size:  20px;
-            color:white;
-        }
-
-        .navbarlink:hover {
-            color: black;
-            text-decoration: none;
-
-        }
-
-        .navlink {
-            font-size:290px
-
-        }
-
-        li.nav-item {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.4em;
-        }
-
-        .navcolor li{
-            color:white
-        }
-
-//Center of "About/Homepage"
-    //Main Still Logo (The one in the center of the "About" Page)
-            .stillLogo{
-            font-family: 'Dancing Script', cursive;
-            color:whitesmoke;
-            font-size: 290px;
-            line-height: 150px;
-            }
-
-            .stillT{
-            font-family: 'Cinzel', serif;
-            }
-
-            .illpositioning {
-                position: relative;
-                right: 40px;
-                bottom: 5px;
-            }
-            .sPositioning {
-                position: relative;
-                left: 40px;
-                bottom: 15px;
-            }
+  
+        //GENERAL STYLING (That affects every page)
+                            body{
+                                background: linear-gradient(249deg, #f3a201e0 38%, #f5a80f 70%);
+                            }
 
 
+        //STILL NAVBAR STYLIZING
+                    //Still Homepage link (Top-Left Corner Link)
+                            .stillLogoNav{
+                                color:whitesmoke;
+                                font-family: 'Dancing Script', cursive;
+                                font-size:40px;
+                            }
+                            .stillLogoNav:hover {
+                                color: black;
+                                text-decoration: none;
+                            }
+                            #still_TNav{
+                                font-family: 'Cinzel', serif;
+                            }
+                            #still_illNav{
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #still_sNav{
+                                position: relative;
+                                bottom: 2px;
+                            }
 
-    .hide {
-        visibility: hidden;
-    }
+                    //"Portfolio" Link
+                            .navbarlink {
+                                color:whitesmoke;
+                                font-family: 'Dancing Script', cursive;
+                                font-size:  20px;
+                            }
+                            .navbarlink:hover {
+                                color: black;
+                                text-decoration: none;
+                            }
+
+                            #portfolio_porNav{
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #portfolio_TNav{
+                                font-family: 'Cinzel', serif;
+                            }
+                            #portfolio_folioNav{
+                                position: relative;
+                                bottom: 1px;
+                            }
+
+                    //"Collective" Link
+                            .navbarlink {
+                                color:whitesmoke;
+                                font-family: 'Dancing Script', cursive;
+                                font-size:  20px;
+                            }
+                            .navbarlink:hover {
+                                color: black;
+                                text-decoration: none;
+                            }
+                            #collective_collecNav{
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #collective_TNav{
+                                font-family: 'Cinzel', serif;
+                            }
+                            #collective_iveNav{
+                                position: relative;
+                                bottom: 1px;
+                            }
+
+        //STILL FOOTER STYLIZING
+                            .footer-item {
+                                font-size: 18px;
+                                // font-size: 1.4em;
+                                color:whitesmoke;
+                                font-family: 'Dancing Script', cursive;
+                                // color:black;
+                                // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                            }    
+                            .footer-item:hover {
+                                color: black;
+                                text-decoration: none;
+                            }
+                            
+                    //"Contact" Link
+                            #contact_conFoot{
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #contact_TFoot{
+                                font-family: 'Cinzel', serif;
+                            }
+                            #contact_actFoot{
+                                position: relative;
+                                bottom: 1px;
+                            }
+
+                    //"Terms & Conditions" Link
+                            #terms_TFoot{
+                                font-family: 'Cinzel', serif;
+                            }
+                            #terms_ermsFoot{
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #conditions_condiFoot{
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #conditions_TFoot{
+                                font-family: 'Cinzel', serif;
+                            }
+                            #conditions_ionsFoot{
+                                position: relative;
+                                bottom: 1px;
+                            }
+
+                    //A and Copyright Symbol
+                            .footer-item2 {
+                                font-size: 16px;
+                                color:whitesmoke;
+                                font-family:'Josefin Sans', sans-serif;
+                                line-height: 1.9em;
+                            }
+                            .footer-item3 {
+                                font-size: 18px;
+                                color:whitesmoke;
+                                font-family: 'Dancing Script', cursive;
+                            }
+                            .footer-item4 {
+                                font-size: 16px;
+                                color:whitesmoke;
+                                font-family:'Josefin Sans', sans-serif;
+                                line-height: 1.9em;
+                            }
+                            .footer-item4:hover {
+                                color: black;
+                                text-decoration: none;
+                            }
+                    //Still 
+                            #still_sFooter{
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #still_TFooter{
+                                font-family: 'Cinzel', serif;
+                            }
+                            #still_illFooter{
+                                position: relative;
+                            }
+                            
+
+        //LANDING (HOME/ "ABOUT") PAGE 
+            //Center of "About/Homepage"
+
+                    //Main Big "Still" Logo
+                            .stillLogo{
+                                font-family: 'Dancing Script', cursive;
+                                color:whitesmoke;
+                                font-size: 290px;
+                                line-height: 150px;
+                            }
+
+                            .stillT{
+                                font-family: 'Cinzel', serif;
+                            }
+                            
+                            .sPositioning {
+                                position: relative;
+                                left: 40px;
+                                bottom: 15px;
+                            }
+                            .illpositioning {
+                                position: relative;
+                                right: 40px;
+                                bottom: 5px;
+                            }
+
+                    //Text Effects
+                            .hide {
+                                visibility: hidden;
+                            }
+
+                    //Main "Collective" text
+                            #collective{
+                                font-family:'Josefin Sans', sans-serif;
+                                font-size: 42px;
+                            }
+                            .about {
+                                font-size: 24px;
+                                background-color: white;
+                                border-bottom:1px solid black;
+                                padding: 38px;
+                            }
+                            
+                    //Main "S.I.M. (Strategy Identity Marketing)" text
+                            .SIM {
+                                font-family: 'Josefin Sans', sans-serif;
+                                font-size:22px;
+                            }
+
+                    //Main "About Us" text blurb
+                            .aboutus {
+                                width: 50%;
+                                margin:auto;
+                                font-family: 'Josefin Sans', sans-serif;
+                                border-bottom: double;
+                            }
+                            
+                            
 
 
-    #collective{
-        font-family:'Josefin Sans', sans-serif;
-        font-size: 42px;
 
-    }
+//********* Hey T, I have no idea what this belongs to... Do you? **********   
+.aboutleft {
+    background-color:white;
+    color: orange;
+    padding: 10px;
+}
 
+.aboutright {
+    background-color: orange;
+}
 
 .col-md.d-flex.justify-content-center {
     font-size: 5em;
@@ -108,30 +241,10 @@
     padding: 10px;
     box-shadow: 10px 10px  black;
 }
-
-body{
-        background: linear-gradient(249deg, #f3a201e0 38%, #f5a80f 70%);
-}
-
-.aboutleft {
-    background-color:white;
-    color: orange;
-    padding: 10px;
-}
-
-.aboutright {
-    background-color: orange;
-}
-
-
-
-
-
 .text{
     font-size:  25px;
     color:black;
 }
-
 * {
     box-sizing: border-box;
 }
@@ -169,106 +282,104 @@ input[type=submit]:hover {
     background-color: #f2f2f2;
     padding: 20px;
 }
-.footer-item {
-    font-size: 1.4em;
-    color:black;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 .col-md.d-flex.justify-content-center {
     font-size: 2em;
     font-weight: 700;
     line-height: 1em;
 }
-
 #p {
     font-size:  15px;
     color:white;
 }
 
-#servicesSectionBlurb {
-    text-align: left;
-    font-weight: 500;
-}
+// ************************************************************************      
+// ************************************************************************  
 
-.bg-red {
-    background-color:rgb(255, 255, 255);
-        border: 5px solid black;
-        border-radius: 25px;
 
-}
 
-.servicecard2 {
-    background-color: rgb(155, 153, 153);
-}
 
-.servicetext {
-color:white;
-}
+        //SERVICES
+                            #servicesSectionBlurb {
+                                text-align: left;
+                                font-weight: 500;
+                            }
 
-.bg-details1 {
-    background-color: rgb(109, 108, 108);
-    color: white;
+                            .bg-red {
+                                background-color:rgb(255, 255, 255);
+                                border: 5px solid black;
+                                border-radius: 25px;
 
-}
-.bg-details2 {
-    background-color:rgb(155, 153, 153);
-    color: white;
+                            }
 
-}
-.bg-details3 {
-    background-color: rgb(204, 201, 201);
-    color: white;
-}
+                            .servicecard2 {
+                                background-color: rgb(155, 153, 153);
+                            }
 
-hr-white {
-    color: white;
-    border:10px;
-}
+                            .servicetext {
+                                color:white;
+                            }
 
-.maintitle1 {
-    font-family: 'Josefin Sans', sans-serif;
-}
-.maintitle2 {
-    font-family: 'Josefin Sans', sans-serif;
-}
-.maintitle3 {
-    font-family: 'Josefin Sans', sans-serif;
-}
+                            .bg-details1 {
+                                background-color: rgb(109, 108, 108);
+                                color: white;
 
-.foot a {
-    font-size: 15px;
-}
+                            }
+                            .bg-details2 {
+                                background-color:rgb(155, 153, 153);
+                                color: white;
 
-.about {
-    font-size: 24px;
-    background-color: white;
-    border-bottom:1px solid black;
-    padding: 38px;
+                            }
+                            .bg-details3 {
+                                background-color: rgb(204, 201, 201);
+                                color: white;
+                            }
 
-}
+                            hr-white {
+                                color: white;
+                                border:10px;
+                            }
+                    // Service Headers
+                            .maintitle1 {
+                                font-family: 'Josefin Sans', sans-serif;
+                            }
+                            .maintitle2 {
+                                font-family: 'Josefin Sans', sans-serif;
+                            }
+                            .maintitle3 {
+                                font-family: 'Josefin Sans', sans-serif;
+                            }
 
-.SIM {
- font-family: 'Josefin Sans', sans-serif;
- font-size:22px;
-}
-.aboutus {
-    width: 50%;
-    margin:auto;
-     font-family: 'Josefin Sans', sans-serif;
-      border-bottom: double;
-}
 
-// .backgrounddiv {
-//     height: 400px;
-//     width: 250px;
-//     position: absolute;
-//     z-index: -1 ;
-//     background: rgba(226, 154, 19, 0.842);
-//     top: -100px;
 
-// }
+
+
+
+
+
+//**********************************************************************************************      
+//********************************************************************************************** 
 //Unused Navbar Styling (This styling code was messing stuff up, or not giving the desired look)
+        // .backgrounddiv {
+        //     height: 400px;
+        //     width: 250px;
+        //     position: absolute;
+        //     z-index: -1 ;
+        //     background: rgba(226, 154, 19, 0.842);
+        //     top: -100px;
+        // }
+
+        // .navlink {
+        //     font-size:290px
+        // }
+
+        // li.nav-item {
+        //     font-family: 'Dancing Script', cursive;
+        //     font-size: 1.4em;
+        // }
+
+        // .navcolor li{
+        //     color:white
+        //
         // .unHover:hover {
         //     color: white;
         //         padding: 0px;

@@ -5,8 +5,10 @@ export class Navbar extends React.Component {
 	// componentDidMount() {
 	// 	document.querySelector("nav").style.backgroundColor = "green";
 	// }
+
 	render() {
 		let path = window.location.pathname;
+
 		return (
 			<nav className="navbar navbar-expand-md navbar-light">
 				<div
@@ -14,11 +16,11 @@ export class Navbar extends React.Component {
 					id="collapsingNavbar">
 					<ul className="navbar-nav">
 						<li className="nav-item mr-4">
-							<Link to="/" className="stillLogoNav navcolor">
-								<div className="stillLogoNav">
-									<span id="sPositioningNav">s</span>
-									<span id="stillTNav">T</span>
-									<span id="illpositioningNav">ill</span>
+							<Link to="/" className="stillLogoNav">
+								<div>
+									<span id="still_sNav">s</span>
+									<span id="still_TNav">T</span>
+									<span id="still_illNav">ill</span>
 								</div>
 							</Link>
 						</li>
@@ -26,7 +28,11 @@ export class Navbar extends React.Component {
 					<ul className="navbar-nav ml-auto ">
 						<li className="nav-item mr-4">
 							<Link to="/portfolio" className="navbarlink">
-								Portfolio
+								<div>
+									<span id="portfolio_porNav">Por</span>
+									<span id="portfolio_TNav">T</span>
+									<span id="portfolio_folioNav">folio</span>
+								</div>
 							</Link>
 						</li>
 						<li className="nav-item mr-4">
@@ -36,7 +42,11 @@ export class Navbar extends React.Component {
 						</li>
 						<li className="nav-item mr-5">
 							<Link to="/login" className="navbarlink">
-								Collective
+								<div>
+									<span id="collective_collecNav">Collec</span>
+									<span id="collective_TNav">T</span>
+									<span id="collective_iveNav">ive</span>
+								</div>
 							</Link>
 						</li>
 					</ul>

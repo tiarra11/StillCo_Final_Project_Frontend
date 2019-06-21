@@ -66,7 +66,7 @@ export class Still extends React.Component {
 					<div className="row">
 						<div className=" hide col-md-12 text-center about m-auto">
 							<div className="aboutus">
-								Still &amp; Co wants to give you the sTill experience your brand needs. We have a small
+								STill &amp; Co wants to give you the sTill experience your brand needs. We have a small
 								team of creative artists that will expand your brand to a savvy company.
 							</div>
 						</div>
