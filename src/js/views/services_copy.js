@@ -7,95 +7,97 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 import "../../styles/index.scss";
+import { Session } from "bc-react-session";
+
+Session.start({
+	payload: {
+		name: [],
+		price: []
+	},
+	expiration: 86400000
+});
 
 export class Services extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="container rounded-0">
-					<div>
-						<h2>What your brand needs– How you want.</h2>
-						<p id="servicesSectionBlurb">
-							Are you missing the feature that is going to take your brand to the next level? We can help
-							with that. The sTill Collective offers on demand access to a wide range of highly
-							experienced professionals in their respective fields and beyond. And you don&apos;t even
-							need to leave your office.
-						</p>
-						<p id="servicesSectionBlurb">Choose from these options (select all that apply):</p>
-					</div>
-                    
-					<Context.Consumer>
-						{({ store }) => {
-							return (
-								<div className="row">
-									<div className="col-sm-6">
-										<div className="card">
-											<div className="card-body">
-												<h3>{store.services[0].title}</h3>
-												<p className="card-text">{store.services[0].shortdescription}</p>
-                                                
+				<div className="container rounded-0 bg-red ">
+					<div className="row">
+						<div className="col-md-4">
+							<h2 className="text-center maintitle1">Strategy</h2>
 
-												<a href="#" className="btn btn-primary">
-													Juuuuust $ {store.services[0].cost}
-												</a>
+							<Context.Consumer>
+								{({ store }) => {
+									return store.strategy.map((item, index) => {
+										return (
+											<div key={index} className="card col-12 my-4 servicecard2">
+												<div
+													className="card-body"
+													onClick={() => {
+														let { payload } = Session.get();
+														Session.setPayload({ name: item.name, price: item.price });
+														// let session = Session.get();
+														alert(
+															Session.get().payload.name +
+																" " +
+																Session.get().payload.price
+														);
+													}}>
+													<p className="card-text servicetext">{item.name} </p>
+
+													<p className="card-text servicetext">
+														{item.price} <i className="fas fa-plus-circle" />
+													</p>
+												</div>
 											</div>
-										</div>
-									</div>
-								</div>
-							);
-						}}
-					</Context.Consumer>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
 
-					<div className="mb-2 d-flex justify-content-center">
-						<h3>Strategy</h3>
+						<div className="col-md-4">
+							<h2 className="text-center maintitle2">Identity</h2>
+							<Context.Consumer>
+								{({ store }) => {
+									return store.identity.map((item, index) => {
+										return (
+											<div key={index} className="card col-12 my-4 servicecard2">
+												<div className="card-body">
+													<p className="card-text servicetext">{item.name}</p>
+												</div>
+											</div>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
+
+						<div className="col-md-4">
+							<h2 className="text-center maintitle3">Marketing</h2>
+							<Context.Consumer>
+								{({ store }) => {
+									return store.marketing.map((item, index) => {
+										return (
+											<div key={index} className="card col-12 my-4 servicecard2">
+												<div className="card-body">
+													<p className="card-text servicetext">{item.name}</p>
+												</div>
+											</div>
+										);
+									});
+								}}
+							</Context.Consumer>
+						</div>
 					</div>
-					<div className="row d-flex justify-content-center m-auto">
-						<Button className="mx-5" variant="primary" size="lg">
-							Organizational Analysis
-						</Button>
-						<Button className="mx-5" variant="primary" size="lg">
-							Action Planning
-						</Button>
-						<Button className="mx-5" variant="primary" size="lg">
-							Corporate Re-Branding
-						</Button>
-					</div>
-					<div className="mb-2 mt-5 d-flex justify-content-center">
-						<h3>Identity</h3>
-					</div>
-					<div className="row d-flex justify-content-center m-auto">
-						<Button className="mx-5" variant="primary" size="lg">
-							Logo Design
-						</Button>
-						<Button className="mx-5" variant="primary" size="lg">
-							Website Design
-						</Button>
-						<Button className="mx-5" variant="primary" size="lg">
-							Product Design
-						</Button>
-					</div>
-					<div className="mb-2 mt-5 d-flex justify-content-center">
-						<h3>Marketing</h3>
-					</div>
-					<div className="row d-flex justify-content-center m-auto">
-						<Button className="mx-5" variant="primary" size="lg">
-							Advertising
-						</Button>
-						<Button className="mx-5" variant="primary" size="lg">
-							SEO
-						</Button>
-						<Button className="mx-5" variant="primary" size="lg">
-							Social Media Management
-						</Button>
-					</div>
-					<div className="mb-5" />
 				</div>
-				<div className="container my-5">
+
+				<div className="container rounded-0 my-5 bg-red">
 					<div className="card-deck">
-						<div className="card">
-							<img src="" className="card-img-top" alt="..." />
+						<div className="card bg-details1">
 							<div className="card-body">
 								<h5 className="card-title">sTill Standard</h5>
+								<hr />
 								<p className="card-text" />
 								This package includes:
 								<ul>
@@ -109,16 +111,10 @@ export class Services extends React.Component {
 								</p>
 							</div>
 						</div>
-						<div className="card">
-							<img
-								src={
-									"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ7_OHpyvDWvYNiQkJ9rYs798JMRXnQaC7nOw1zMelWMHEa8YAMQ"
-								}
-								className="card-img-top"
-								alt="..."
-							/>
+						<div className="card bg-details2">
 							<div className="card-body">
 								<h5 className="card-title">Supreme Collective Package</h5>
+								<hr />
 								<p className="card-text">Our Collective Package entails the following services.</p>
 								<ul>
 									<li>Logo Design</li>
@@ -139,10 +135,10 @@ export class Services extends React.Component {
 								</p>
 							</div>
 						</div>
-						<div className="card">
-							<img src="..." className="card-img-top" alt="..." />
+						<div className="card bg-details3">
 							<div className="card-body">
-								<h5 className="card-title">Savvy Package</h5>
+								<h5 className="card-title">Savage Package</h5>
+								<hr />
 								<p className="card-text">The Platinum Package includes:</p>
 								<ul>
 									<li>Logo Design</li>
@@ -163,8 +159,8 @@ export class Services extends React.Component {
 					</div>
 				</div>
 				<div className="my-5">
-					<Button className="mx-5" variant="primary" size="lg">
-						<Link to="/login">Let&apos;t Optimize Your Brand</Link>
+					<Button className="mx-5" variant="primary" size="lg" s>
+						<Link to="/login">Proceed to Checkout</Link>
 					</Button>
 				</div>
 			</div>

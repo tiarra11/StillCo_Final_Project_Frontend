@@ -17,6 +17,7 @@ import { Footer } from "./component/footer";
 import { Contact } from "./views/contact";
 import { Terms } from "./views/termsConditions";
 import { Checkout } from "./views/checkout";
+import { Cart } from "./views/cart";
 import { Confirmation } from "./views/confirmation";
 
 // import { Single } from "./views/single";
@@ -46,6 +47,7 @@ export class Layout extends React.Component {
 							<Route exact path="/prescheduler" component={ALaCartPreScheduler} />
 							<Route exact path="/scheduler" component={Scheduler} />
 							<Route exact path="/checkout" component={Checkout} />
+							<Route exact path="/cart" component={Cart} />
 							<Route exact path="/confirmation" component={Confirmation} />
 
 							<Route render={() => <h1>Not found!</h1>} />

@@ -59,21 +59,21 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "Organizational Analysis",
 					description: "j",
-					price: 200,
+					price: 2000,
 					rep: "martin"
 				},
 				{
 					name: "	Action Planning",
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 200,
+					price: 3000,
 					rep: "joao"
 				},
 				{
 					name: "Corporate Re-Branding",
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 200,
+					price: 5000,
 					rep: "hernan"
 				}
 			],
@@ -81,34 +81,40 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "logo design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 1000
 				},
 				{
 					name: "website design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 2000
 				},
 				{
 					name: "product design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 1500
 				}
 			],
 			marketing: [
 				{
 					name: "Advertising",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 2500
 				},
 				{
 					name: "Seo",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 750
 				},
 				{
 					name: "Social Media Managment",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 1200
 				}
 			],
 			login: []
@@ -135,6 +141,10 @@ const getState = ({ getStore, setStore }) => {
 				// 	// history.push("/dashboard");
 				// })
 				// .catch(error => console.error("Error:", error));
+			},
+			goToCheckout: () => {
+				// const store =getStore;
+				console.log("goToCheckout");
 			},
 			generateOrder: selected_services => {
 				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/orders";

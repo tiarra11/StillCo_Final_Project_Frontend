@@ -356,7 +356,7 @@ input[type=submit]:hover {
     color: #131313;
     letter-spacing: .1em;
     text-shadow:
-      -10px 10px 0 #0000001a,
+      -16px 19px 0 #00000010,
   }
 
 .fadein {
@@ -368,6 +368,7 @@ input[type=submit]:hover {
     -webkit-animation: fadein 20s; /* Safari and Chrome */
     -o-animation: fadein 20s; /* Opera */
 }
+
 @keyframes fadein {
     from {
         opacity:0;
@@ -440,3 +441,6 @@ input[type=submit]:hover {
         // //     font-size:  30px;
         // //     color:white;
         // }
+.card-click {
+    cursor:pointer;
+}

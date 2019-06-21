@@ -27,27 +27,17 @@ export class Services extends React.Component {
 							<h2 className="text-center maintitle1">Strategy</h2>
 
 							<Context.Consumer>
-								{({ store }) => {
+								{({ store, actions }) => {
 									return store.strategy.map((item, index) => {
 										return (
-											<div key={index} className="card col-12 my-4 servicecard2">
-												<div
-													className="card-body"
-													onClick={() => {
-														let { payload } = Session.get();
-														Session.setPayload({ name: item.name, price: item.price });
-														// let session = Session.get();
-														alert(
-															Session.get().payload.name +
-																" " +
-																Session.get().payload.price
-														);
-													}}>
+											<div
+												key={index}
+												onClick={() => actions.goToCheckout()}
+												className="card col-12 my-4 servicecard2 card-click">
+												<div className="card-body">
 													<p className="card-text servicetext">{item.name} </p>
 
-													<p className="card-text servicetext">
-														{item.price} <i className="fas fa-plus-circle" />
-													</p>
+													<p className="card-text servicetext">{item.price}</p>
 												</div>
 											</div>
 										);
@@ -62,9 +52,13 @@ export class Services extends React.Component {
 								{({ store }) => {
 									return store.identity.map((item, index) => {
 										return (
-											<div key={index} className="card col-12 my-4 servicecard2">
+											<div
+												key={index}
+												onClick={() => actions.goToCheckout()}
+												className="card col-12 my-4 servicecard2 card-click">
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name}</p>
+													<p className="card-text servicetext">{item.price}</p>
 												</div>
 											</div>
 										);
@@ -79,9 +73,13 @@ export class Services extends React.Component {
 								{({ store }) => {
 									return store.marketing.map((item, index) => {
 										return (
-											<div key={index} className="card col-12 my-4 servicecard2">
+											<div
+												key={index}
+												onClick={() => actions.goToCheckout()}
+												className="card col-12 my-4 servicecard2 card-click">
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name}</p>
+													<p className="card-text servicetext">{item.price}</p>
 												</div>
 											</div>
 										);
