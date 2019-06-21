@@ -15,24 +15,29 @@ export class Navbar extends React.Component {
 					<ul className="navbar-nav">
 						<li className="nav-item mr-4">
 							<Link to="/" className="stillLogoNav navcolor">
-								sTill
-								{/*<div className="unHover">
-									<span className="sPositioningNav">s</span>
-									<span className="stillTNav">T</span>
-									<span className="illpositioningNav">ill</span>
-								</div>*/}
+								<div className="stillLogoNav">
+									<span id="sPositioningNav">s</span>
+									<span id="stillTNav">T</span>
+									<span id="illpositioningNav">ill</span>
+								</div>
 							</Link>
 						</li>
 					</ul>
 					<ul className="navbar-nav ml-auto ">
 						<li className="nav-item mr-4">
-							<Link to="/portfolio">Portfolio</Link>
+							<Link to="/portfolio" className="navbarlink">
+								Portfolio
+							</Link>
 						</li>
 						<li className="nav-item mr-4">
-							<Link to="/Services">Services</Link>
+							<Link to="/Services" className="navbarlink">
+								Services
+							</Link>
 						</li>
-						<li className="nav-item mr-4">
-							<Link to="/login">The Collective</Link>
+						<li className="nav-item mr-5">
+							<Link to="/login" className="navbarlink">
+								Collective
+							</Link>
 						</li>
 					</ul>
 				</div>

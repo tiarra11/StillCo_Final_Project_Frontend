@@ -42,7 +42,7 @@ export class Still extends React.Component {
 							</span>
 						</div>
 
-						<div id="collective" className="hide col-md-12 pt-2 pb-5 text-center">
+						<div id="collective" className="hide col-md-12 pt-1 pb-5 text-center">
 							C O L L E C T I V E
 						</div>
 					</div>
