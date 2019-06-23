@@ -161,7 +161,7 @@ const getState = ({ getStore, setStore }) => {
 			},
 
 			addToShoppingBag: () => {
-				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/services";
+				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/service_catalog";
 			},
 
 			// const store = getStore();

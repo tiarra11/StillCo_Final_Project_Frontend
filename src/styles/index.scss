@@ -1,7 +1,7 @@
 // @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
 // @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 
-  
+
         //GENERAL STYLING (That affects every page)
                             body{
                                 background: linear-gradient(249deg, #f3a201e0 38%, #f5a80f 70%);
@@ -84,12 +84,12 @@
                                 font-family: 'Dancing Script', cursive;
                                 // color:black;
                                 // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-                            }    
+                            }
                             .footer-item:hover {
                                 color: black;
                                 text-decoration: none;
                             }
-                            
+
                     //"Contact" Link
                             #contact_conFoot{
                                 position: relative;
@@ -145,7 +145,7 @@
                                 color: black;
                                 text-decoration: none;
                             }
-                    //Still 
+                    //Still
                             #still_sFooter{
                                 position: relative;
                                 bottom: 1px;
@@ -156,9 +156,9 @@
                             #still_illFooter{
                                 position: relative;
                             }
-                            
 
-        //LANDING (HOME/ "ABOUT") PAGE 
+
+        //LANDING (HOME/ "ABOUT") PAGE
             //Center of "About/Homepage"
 
                     //Main Big "Still" Logo
@@ -172,7 +172,7 @@
                             .stillT{
                                 font-family: 'Cinzel', serif;
                             }
-                            
+
                             .sPositioning {
                                 position: relative;
                                 left: 40px;
@@ -200,7 +200,7 @@
                                 border-bottom:1px solid black;
                                 padding: 38px;
                             }
-                            
+
                     //Main "S.I.M. (Strategy Identity Marketing)" text
                             .SIM {
                                 font-family: 'Josefin Sans', sans-serif;
@@ -214,12 +214,12 @@
                                 font-family: 'Josefin Sans', sans-serif;
                                 border-bottom: double;
                             }
-                            
-                            
 
 
 
-//********* Hey T, I have no idea what this belongs to... Do you? **********   
+
+
+//********* Hey T, I have no idea what this belongs to... Do you? **********
 .aboutleft {
     background-color:white;
     color: orange;
@@ -292,8 +292,8 @@ input[type=submit]:hover {
     color:white;
 }
 
-// ************************************************************************      
-// ************************************************************************  
+// ************************************************************************
+// ************************************************************************
 
 
 
@@ -350,14 +350,62 @@ input[type=submit]:hover {
                             }
 
 
+//shadow
+
+.elegantshadow {
+    color: #131313;
+    letter-spacing: .1em;
+    text-shadow:
+      -16px 19px 0 #00000010,
+  }
+
+.fadein {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 10s;
+    -moz-animation: fadein 20s; /* Firefox */
+    -webkit-animation: fadein 20s; /* Safari and Chrome */
+    -o-animation: fadein 20s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 
 
-
-
-
-//**********************************************************************************************      
-//********************************************************************************************** 
+//**********************************************************************************************
+//**********************************************************************************************
 //Unused Navbar Styling (This styling code was messing stuff up, or not giving the desired look)
         // .backgrounddiv {
         //     height: 400px;
@@ -393,3 +441,6 @@ input[type=submit]:hover {
         // //     font-size:  30px;
         // //     color:white;
         // }
+.card-click {
+    cursor:pointer;
+}

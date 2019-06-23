@@ -35,9 +35,7 @@ export class Services extends React.Component {
 												<div className="card-body" onClick={() => {}}>
 													<p className="card-text servicetext">{item.name} </p>
 
-													<p className="card-text servicetext">
-														{item.price} <i className="fas fa-plus-circle" />
-													</p>
+													<p className="card-text servicetext">{item.price}</p>
 												</div>
 											</div>
 										);
@@ -56,6 +54,7 @@ export class Services extends React.Component {
 												{/* This is where the onClick will be set for the selection of the package. */}
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name}</p>
+													<p className="card-text servicetext">{item.price}</p>
 												</div>
 											</div>
 										);
@@ -74,6 +73,7 @@ export class Services extends React.Component {
 												{/* This is where the onClick will be set for the selection of the package. */}
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name}</p>
+													<p className="card-text servicetext">{item.price}</p>
 												</div>
 											</div>
 										);
@@ -169,3 +169,11 @@ export class Services extends React.Component {
 // 		" " +
 // 		Session.get().payload.price
 // );
+//<div key={index}
+	//onClick={() => actions.goToCheckout()}
+	//className="card col-12 my-4 servicecard2 card-click">
+		//<div className="card-body">
+		//	<p className="card-text servicetext">{item.name}</p>
+		//	<p className="card-text servicetext">{item.price}</p>
+		//</div>
+//</div>

@@ -12,7 +12,7 @@ export class Navbar extends React.Component {
 		return (
 			<nav className="navbar navbar-expand-md navbar-light">
 				<div
-					className={path == "/" ? "hide navbar-collapse collapse" : "navbar-collapse collapse"}
+					className={path == "/" ? "fadein navbar-collapse collapse" : "navbar-collapse collapse"}
 					id="collapsingNavbar">
 					<ul className="navbar-nav">
 						<li className="nav-item mr-4">
