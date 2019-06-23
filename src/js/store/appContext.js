@@ -22,7 +22,7 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/service_catalog";
+			const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/services";
 			fetch(url, {
 				method: "GET",
 				headers: {
