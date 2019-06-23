@@ -111,10 +111,31 @@ const getState = ({ getStore, setStore }) => {
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				}
 			],
-			login: []
+			serviceCatalog: [],
+			shoppingBag: []
 		},
+
 		actions: {
-			authenticateLogin: () => {},
+			authenticateLogin: (email, password) => {
+				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/login";
+				fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+
+					body: JSON.stringify({
+						email: email,
+						password: password
+					})
+				})
+					.then(response => response.json())
+					.then(token => {
+						console.log(token);
+						localStorage.setItem("jwt", token.jwt);
+					});
+			},
+
 			createClient: (name, email, password, history) => {
 				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
 				fetch(url, {
@@ -128,15 +149,34 @@ const getState = ({ getStore, setStore }) => {
 						email: email,
 						password: password
 					})
-				});
-				// .then(resp => resp.json())
-				// .then(data => {
-				// 	console.log("Account Successfully Created", JSON.stringify(data));
-				// 	// history.push("/dashboard");
-				// })
-				// .catch(error => console.error("Error:", error));
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						console.log("Account Successfully Created", data);
+						history.push("/dashboard");
+					})
+					.catch(error => console.error("Error: This didn't work. Try again", error));
 			},
-			generateOrder: selected_services => {
+
+			addToShoppingBag: () => {
+				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/service_catalog";
+			},
+
+			// const store = getStore();
+			// store.shoppingBag.push(item.name,item.price);
+			// fetch( , {
+			// 	method: "POST"
+			// }).then(() => {
+			// 	fetch(url)
+			// 		.then(response => response.json())
+			// 		.then(updatedData => {
+			// 			store.cart = updatedData.reverse();
+			// 			setStore({ store, cart });
+			// 		});
+
+			generateOrder: cvv => {
 				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/orders";
 				fetch(url, {
 					method: "POST",
@@ -144,7 +184,7 @@ const getState = ({ getStore, setStore }) => {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify({
-						selected_services: selected_services
+						cvv: cvv
 					})
 				});
 				// .then(resp => resp.json())

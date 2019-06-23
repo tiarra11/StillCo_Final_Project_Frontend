@@ -9,13 +9,13 @@ import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 import { Session } from "bc-react-session";
 
-Session.start({
-	payload: {
-		name: [],
-		price: []
-	},
-	expiration: 86400000
-});
+// Session.start({
+// 	payload: {
+// 		name: [],
+// 		price: []
+// 	},
+// 	expiration: 86400000
+// });
 
 export class Services extends React.Component {
 	render() {
@@ -27,22 +27,12 @@ export class Services extends React.Component {
 							<h2 className="text-center maintitle1">Strategy</h2>
 
 							<Context.Consumer>
-								{({ store }) => {
+								{({ store, action }) => {
 									return store.strategy.map((item, index) => {
 										return (
 											<div key={index} className="card col-12 my-4 servicecard2">
-												<div
-													className="card-body"
-													onClick={() => {
-														let { payload } = Session.get();
-														Session.setPayload({ name: item.name, price: item.price });
-														// let session = Session.get();
-														alert(
-															Session.get().payload.name +
-																" " +
-																Session.get().payload.price
-														);
-													}}>
+												{/* This is where the onClick will be set for the selection of the package. */}
+												<div className="card-body" onClick={() => {}}>
 													<p className="card-text servicetext">{item.name} </p>
 
 													<p className="card-text servicetext">
@@ -63,6 +53,7 @@ export class Services extends React.Component {
 									return store.identity.map((item, index) => {
 										return (
 											<div key={index} className="card col-12 my-4 servicecard2">
+												{/* This is where the onClick will be set for the selection of the package. */}
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name}</p>
 												</div>
@@ -80,6 +71,7 @@ export class Services extends React.Component {
 									return store.marketing.map((item, index) => {
 										return (
 											<div key={index} className="card col-12 my-4 servicecard2">
+												{/* This is where the onClick will be set for the selection of the package. */}
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name}</p>
 												</div>
@@ -95,6 +87,7 @@ export class Services extends React.Component {
 				<div className="container rounded-0 my-5 bg-red">
 					<div className="card-deck">
 						<div className="card bg-details1">
+							{/* This is where the onClick will be set for the selection of the package. */}
 							<div className="card-body">
 								<h5 className="card-title">sTill Standard</h5>
 								<hr />
@@ -167,3 +160,12 @@ export class Services extends React.Component {
 		);
 	}
 }
+// onClick={() => {
+// let { payload } = Session.get();
+// Session.setPayload({ name: item.name, price: item.price });
+// // let session = Session.get();
+// alert(
+// 	Session.get().payload.name +
+// 		" " +
+// 		Session.get().payload.price
+// );

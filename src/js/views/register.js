@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import { Row } from "react-bootstrap";
+import PropTypes from "prop-types";
 
 import { Link } from "react-router-dom";
 
@@ -37,9 +38,22 @@ export class Register extends React.Component {
 									</Form.Group>
 									<Form.Group as={Row}>
 										<Col className="text-center">
-											<Button type="submit">Register</Button>
+											<Button
+												onClick={() => {
+													let name = document.querySelector("[type=formHorizontalName]")
+														.value;
+													let email = document.querySelector("[type=email]").value;
+													let password = document.querySelector("[type=password]").value;
+													actions.createClient(name, email, password, this.props.history);
+												}}>
+												Create Account
+											</Button>
+										</Col>
+									</Form.Group>
+									<Form.Group as={Row}>
+										<Col className="mt-3 text-center">
 											<p>
-												Already have an account? <Link to="/login">Log in!</Link>.
+												Already have an account? <Link to="/login">Log In</Link>.
 											</p>
 										</Col>
 									</Form.Group>
@@ -53,4 +67,6 @@ export class Register extends React.Component {
 	}
 }
 
-// render(<FormExample />);
+Register.propTypes = {
+	history: PropTypes.object
+};

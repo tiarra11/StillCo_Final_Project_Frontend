@@ -31,7 +31,7 @@ class StrategyCarousel extends React.Component {
 					return (
 						<Carousel activeIndex={index} direction={direction} onSelect={this.handleSelect}>
 							{/* This is the content for the first slide of the first Carousel called "Strategy".
-							The content is comprised of the tem (for image), and a caption (for the blurb of info)*/}
+							The content is comprised of the item (for image), and a caption (for the blurb of info)*/}
 							<Carousel.Item>
 								<img
 									className="d-block"
