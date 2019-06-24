@@ -32,7 +32,14 @@ export class Login extends React.Component {
 									</Form.Group>
 									<Form.Group as={Row}>
 										<Col className="text-center">
-											<Button type="submit">Sign in</Button>
+											<Button
+												onClick={() => {
+													let email = document.querySelector("[type=email]").value;
+													let password = document.querySelector("[type=password]").value;
+													actions.authenticateLogin(email, password);
+												}}>
+												Log In
+											</Button>
 											<p>
 												Don’t have an account? <Link to="/register">Register now!</Link>.
 											</p>

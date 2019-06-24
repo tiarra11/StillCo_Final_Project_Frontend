@@ -49,7 +49,7 @@ export class Layout extends React.Component {
 							<Route exact path="/checkout" component={Checkout} />
 							<Route exact path="/cart" component={Cart} />
 							<Route exact path="/confirmation" component={Confirmation} />
-
+							<Route exact path="/dashboard" render={() => <h1>This will be the dashboard</h1>} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

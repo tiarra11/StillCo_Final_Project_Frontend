@@ -19,10 +19,12 @@
 // 				<div className="collapse navbar-collapse justify-content-center" id="navbarNav">
 // 					<ul className="navbar-nav navcolor">
 // 						<li className="nav-item mr-4">
-// 							<Link to="/" className="navcolor" id="stillLogo">
-// 								s<span id="stillT">T</span>
-// 								ill
+// 							<Link to="/" className="navcolor">
+// 								sTill
 // 							</Link>
+// 						</li>
+// 						<li className="nav-item mr-4">
+// 							<Link to="/about">About</Link>
 // 						</li>
 // 						<li className="nav-item mr-4">
 // 							<Link to="/portfolio">Portfolio</Link>
@@ -30,6 +32,12 @@
 // 						<li className="nav-item mr-4">
 // 							<Link to="/Services">Services</Link>
 // 						</li>
+// 						{/* <li className="nav-item mr-4">
+// 							<Link to="/Contact">Contact</Link>
+// 						</li>
+// 						<li className="nav-item mr-4">
+// 							<Link to="/login">Collective</Link>
+// 						</li> */}
 // 					</ul>
 // 				</div>
 // 			</nav>

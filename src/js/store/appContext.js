@@ -22,11 +22,21 @@ const injectContext = PassedComponent => {
 		}
 
 		componentDidMount() {
-			/**
-			 * EDIT THIS!
-			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
-			 * you should do your ajax requests or fetch api requests here
-			 **/
+			const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/services";
+			fetch(url, {
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json"
+				}
+			})
+				.then(resp => {
+					return resp.json();
+				})
+				.then(data => {
+					console.log("Able to fetch catalog", data);
+					this.state.setStore({ serviceCatalog: data });
+				})
+				.catch(error => console.error("Error: It didn't work. Try again", error));
 		}
 
 		render() {

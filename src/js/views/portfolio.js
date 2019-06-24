@@ -2,8 +2,6 @@ import React from "react";
 import "../../styles/index.scss";
 
 import StrategyCarousel from "./strategyCarousel.js";
-import IdentityCarousel from "./identityCarousel.js";
-import MarketingCarousel from "./marketingCarousel.js";
 
 export class Portfolio extends React.Component {
 	render() {

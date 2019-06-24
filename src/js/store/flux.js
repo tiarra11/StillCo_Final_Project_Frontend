@@ -59,21 +59,21 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "Organizational Analysis",
 					description: "j",
-					price: 2000,
+					price: 200,
 					rep: "martin"
 				},
 				{
 					name: "	Action Planning",
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 3000,
+					price: 200,
 					rep: "joao"
 				},
 				{
 					name: "Corporate Re-Branding",
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 5000,
+					price: 200,
 					rep: "hernan"
 				}
 			],
@@ -81,46 +81,61 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "logo design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 1000
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				},
 				{
 					name: "website design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 2000
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				},
 				{
 					name: "product design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 1500
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				}
 			],
 			marketing: [
 				{
 					name: "Advertising",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 2500
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				},
 				{
 					name: "Seo",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 750
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				},
 				{
 					name: "Social Media Managment",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 1200
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
 				}
 			],
-			login: []
+			serviceCatalog: [],
+			shoppingBag: []
 		},
+
 		actions: {
-			authenticateLogin: () => {},
+			authenticateLogin: (email, password) => {
+				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/login";
+				fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+
+					body: JSON.stringify({
+						email: email,
+						password: password
+					})
+				})
+					.then(response => response.json())
+					.then(token => {
+						console.log(token);
+						localStorage.setItem("jwt", token.jwt);
+					});
+			},
+
 			createClient: (name, email, password, history) => {
 				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
 				fetch(url, {
@@ -134,19 +149,34 @@ const getState = ({ getStore, setStore }) => {
 						email: email,
 						password: password
 					})
-				});
-				// .then(resp => resp.json())
-				// .then(data => {
-				// 	console.log("Account Successfully Created", JSON.stringify(data));
-				// 	// history.push("/dashboard");
-				// })
-				// .catch(error => console.error("Error:", error));
+				})
+					.then(resp => {
+						return resp.json();
+					})
+					.then(data => {
+						console.log("Account Successfully Created", data);
+						history.push("/dashboard");
+					})
+					.catch(error => console.error("Error: This didn't work. Try again", error));
 			},
-			goToCheckout: () => {
-				// const store =getStore;
-				console.log("goToCheckout");
+
+			addToShoppingBag: () => {
+				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/service_catalog";
 			},
-			generateOrder: selected_services => {
+
+			// const store = getStore();
+			// store.shoppingBag.push(item.name,item.price);
+			// fetch( , {
+			// 	method: "POST"
+			// }).then(() => {
+			// 	fetch(url)
+			// 		.then(response => response.json())
+			// 		.then(updatedData => {
+			// 			store.cart = updatedData.reverse();
+			// 			setStore({ store, cart });
+			// 		});
+
+			generateOrder: cvv => {
 				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/orders";
 				fetch(url, {
 					method: "POST",
@@ -154,7 +184,7 @@ const getState = ({ getStore, setStore }) => {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify({
-						selected_services: selected_services
+						cvv: cvv
 					})
 				});
 				// .then(resp => resp.json())
