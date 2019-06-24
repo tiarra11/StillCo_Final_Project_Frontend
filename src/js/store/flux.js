@@ -11,7 +11,9 @@ const getState = ({ getStore, setStore }) => {
 				},
 				{
 					title: "identiTy",
-					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
+					image:
+						"https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/759968/settings_images/5IbPvI1gRqqi3sgZUpJ5_MORE_LOGO_AllTeal300-01.png",
+
 					info: "Design, Logos, and Websites."
 				},
 				{
@@ -59,21 +61,21 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "Organizational Analysis",
 					description: "j",
-					price: 200,
+					price: 2000,
 					rep: "martin"
 				},
 				{
 					name: "	Action Planning",
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 200,
+					price: 3000,
 					rep: "joao"
 				},
 				{
 					name: "Corporate Re-Branding",
 					description:
 						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 200,
+					price: 5000,
 					rep: "hernan"
 				}
 			],
@@ -81,34 +83,40 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "logo design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 1000
 				},
 				{
 					name: "website design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 2000
 				},
 				{
 					name: "product design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 1500
 				}
 			],
 			marketing: [
 				{
 					name: "Advertising",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 2000
 				},
 				{
 					name: "Seo",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 1700
 				},
 				{
 					name: "Social Media Managment",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 2500
 				}
 			],
 			serviceCatalog: [],

@@ -49,6 +49,12 @@ export class Navbar extends React.Component {
 								</div>
 							</Link>
 						</li>
+						<li className="nav-item mr-4">
+							{" "}
+							<Link to="/cart">
+								<i className="fas fa-shopping-cart" style={{ color: "white" }} />
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</nav>

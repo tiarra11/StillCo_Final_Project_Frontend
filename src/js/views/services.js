@@ -151,8 +151,8 @@ export class Services extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="my-5">
-					<Button className="mx-5" variant="primary" size="lg" s>
+				<div className="my-5 text-center">
+					<Button className="mx-3 " variant="light" size="lg">
 						<Link to="/login">Proceed to Checkout</Link>
 					</Button>
 				</div>
@@ -170,10 +170,10 @@ export class Services extends React.Component {
 // 		Session.get().payload.price
 // );
 //<div key={index}
-	//onClick={() => actions.goToCheckout()}
-	//className="card col-12 my-4 servicecard2 card-click">
-		//<div className="card-body">
-		//	<p className="card-text servicetext">{item.name}</p>
-		//	<p className="card-text servicetext">{item.price}</p>
-		//</div>
+//onClick={() => actions.goToCheckout()}
+//className="card col-12 my-4 servicecard2 card-click">
+//<div className="card-body">
+//	<p className="card-text servicetext">{item.name}</p>
+//	<p className="card-text servicetext">{item.price}</p>
+//</div>
 //</div>
