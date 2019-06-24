@@ -32,8 +32,8 @@ export const Footer = () => {
 					<span id="still_illFooter">ill</span>
 				</div>
 				<div className="footer-item2 mx-2">x</div>
-				<div className="footer-item4 mr-3">The [A.M.P.D.] Life</div>
-				<div className="footer-item2">2017-2019</div>
+				<div className="footer-item4 mr-3 ">The [A.M.P.D.] Life</div>
+				<div className="footer-item2 ">2017-2019</div>
 			</div>
 		</div>
 	);
