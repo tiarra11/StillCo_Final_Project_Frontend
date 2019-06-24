@@ -304,11 +304,16 @@ input[type=submit]:hover {
                                 font-weight: 500;
                             }
 
+                            .shadowdiv{
+                               box-shadow: -15px 15px;
+                               background-color: black;
+
+                            }
+
                             .bg-red {
                                 background-color:rgb(255, 255, 255);
                                 border: 5px solid black;
                                 border-radius: 25px;
-
                             }
 
                             .servicecard2 {
@@ -364,9 +369,9 @@ input[type=submit]:hover {
     font-size: 21px;
     text-align: center;
     animation: fadein 10s;
-    -moz-animation: fadein 20s; /* Firefox */
-    -webkit-animation: fadein 20s; /* Safari and Chrome */
-    -o-animation: fadein 20s; /* Opera */
+    -moz-animation: fadein 5s; /* Firefox */
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+    -o-animation: fadein 5s; /* Opera */
 }
 
 @keyframes fadein {

@@ -47,14 +47,13 @@ export class Still extends React.Component {
 						</div>
 					</div>
 
-					<div className="fadein row text d-flex justify-content-center ml-7 SIM">
-						<div className="col" />
-						<div className="col-2">STRATEGY</div>
-						<div className="col-2">IDENTITY</div>
-						<div className="col-2">MARKETING</div>
-						<div className="col" />
+					<div className="fadein SIM text SIM">
+						<div className="row">
+							<div className="col-sm text-center">STRATEGY</div>
+							<div className="col-sm text-center">IDENTITY</div>
+							<div className="col-sm text-center">MARKETING</div>
+						</div>
 					</div>
-
 					{/*
 					<p className="verticaltext">some text</p>
 

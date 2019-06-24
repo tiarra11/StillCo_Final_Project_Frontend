@@ -21,7 +21,7 @@ export class Services extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="container rounded-0 bg-red ">
+				<div className="container rounded-0 bg-red">
 					<div className="row">
 						<div className="col-md-4">
 							<h2 className="text-center maintitle1">Strategy</h2>
