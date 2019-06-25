@@ -19,13 +19,15 @@ export class CardStrategy extends React.Component {
 									alt="Card image cap"
 								/>
 								<div className="card-img-overlay">
-									<h5 className="card-title">{item.title}</h5>
-									<p className="card-text">{item.info}</p>
-									<Link to={"/single-service/" + index}>
-										<button type="button" className="btn btn-info">
-											Details
-										</button>
-									</Link>
+									<div className="dark-transparent">
+										<h5 className="card-title">{item.title}</h5>
+										<p className="card-text">{item.info}</p>
+										<Link to={"/single-service/" + index}>
+											<button type="button" className="btn btn-info">
+												Details
+											</button>
+										</Link>
+									</div>
 								</div>
 							</div>
 						);

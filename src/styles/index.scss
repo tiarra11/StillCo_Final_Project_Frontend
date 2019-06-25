@@ -320,8 +320,16 @@ input[type=submit]:hover {
                                 background-color: rgb(155, 153, 153);
                             }
 
+                            .servicecard2:hover {
+                            border: 1px solid black;
+                            text-decoration: none !important;
+                            }
+
                             .servicetext {
                                 color:white;
+                            }
+                            .servicetext:hover > p {
+                                text-decoration: none;
                             }
 
                             .bg-details1 {
@@ -449,3 +457,11 @@ input[type=submit]:hover {
 .card-click {
     cursor:pointer;
 }
+
+.dark-transparent {
+    background-color: #6e6e6e9a;
+    width: 100%;
+    padding: 15px;
+        border-radius: 15px;
+}
+

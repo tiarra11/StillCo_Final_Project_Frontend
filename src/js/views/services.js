@@ -30,14 +30,16 @@ export class Services extends React.Component {
 								{({ store, action }) => {
 									return store.strategy.map((item, index) => {
 										return (
-											<div key={index} className="card col-12 my-4 servicecard2">
-												{/* This is where the onClick will be set for the selection of the package. */}
-												<div className="card-body" onClick={() => {}}>
-													<p className="card-text servicetext">{item.name} </p>
+											<Link to={"/single-portfoliopage/" + index} key={index}>
+												<div className="card col-12 my-4 servicecard2">
+													{/* This is where the onClick will be set for the selection of the package. */}
+													<div className="card-body">
+														<p className="card-text servicetext">{item.name} </p>
 
-													<p className="card-text servicetext">{item.price}</p>
+														<p className="card-text servicetext">$ {item.price}</p>
+													</div>
 												</div>
-											</div>
+											</Link>
 										);
 									});
 								}}
@@ -54,7 +56,7 @@ export class Services extends React.Component {
 												{/* This is where the onClick will be set for the selection of the package. */}
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name}</p>
-													<p className="card-text servicetext">{item.price}</p>
+													<p className="card-text servicetext">$ {item.price}</p>
 												</div>
 											</div>
 										);
@@ -73,7 +75,7 @@ export class Services extends React.Component {
 												{/* This is where the onClick will be set for the selection of the package. */}
 												<div className="card-body">
 													<p className="card-text servicetext">{item.name}</p>
-													<p className="card-text servicetext">{item.price}</p>
+													<p className="card-text servicetext"> $ {item.price}</p>
 												</div>
 											</div>
 										);
