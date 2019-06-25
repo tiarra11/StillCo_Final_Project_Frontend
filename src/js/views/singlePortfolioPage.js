@@ -25,6 +25,7 @@ export class SinglePortfolioPage extends React.Component {
 									<button type="button" className="btn btn-info">
 										{store.strategy[index].price}
 									</button>
+									<p>{store.strategy[index].description}</p>
 								</div>
 							</div>
 						</div>

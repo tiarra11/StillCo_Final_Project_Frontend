@@ -17,14 +17,13 @@ export class SingleService extends React.Component {
 									<h1>{store.strategyCardContent[index].title}</h1>
 								</div>
 							</div>
-							<div className="row">
-								<div className="col-md-6 m-auto">{store.strategyCardContent[index].info}</div>
-							</div>
+
 							<div className="row">
 								<div className="col-md-6 m-auto">
 									<button type="button" className="btn btn-info">
 										{store.strategyCardContent[index].header}
 									</button>
+									{store.strategyCardContent[index].info}
 								</div>
 							</div>
 						</div>

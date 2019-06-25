@@ -34,7 +34,10 @@ export class Services extends React.Component {
 								{({ store, action }) => {
 									return store.strategy.map((item, index) => {
 										return (
-											<Link to={"/single-portfoliopage/strategy/" + index} key={index}>
+											<Link
+												to={"/single-portfoliopage/strategy/" + index}
+												key={index}
+												style={{ textDecoration: "none" }}>
 												<div className="card col-12 my-4 servicecard2">
 													{/* This is where the onClick will be set for the selection of the package. */}
 													<div className="card-body">

@@ -12,7 +12,7 @@ export class CardStrategy extends React.Component {
 				{({ store, action }) => {
 					return store.strategyCardContent.map((item, index) => {
 						return (
-							<div className="card text-white" key={index}>
+							<div className="card text-white" key={{ index }}>
 								<img
 									className="card-img-top"
 									src="https://images.unsplash.com/photo-1558810629-dcdb3f924dbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=664&q=80"
