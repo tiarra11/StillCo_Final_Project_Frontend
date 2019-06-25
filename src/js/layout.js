@@ -8,6 +8,7 @@ import { Still } from "./views/aboutStill";
 
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
+import { SingleService } from "./views/singleService";
 import { Login } from "./views/login";
 import { Register } from "./views/register";
 import { ALaCartPreScheduler } from "./views/aLaCartPreScheduler";
@@ -42,6 +43,7 @@ export class Layout extends React.Component {
 							<Route exact path="/login" component={Login} />
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/footer" component={Footer} />
+							<Route exact path="/single-service/:theindex" component={SingleService} />
 							<Route exact path="/contact" component={Contact} />
 							<Route exact path="/terms" component={Terms} />
 							<Route exact path="/prescheduler" component={ALaCartPreScheduler} />

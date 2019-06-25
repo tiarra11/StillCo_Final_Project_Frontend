@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			strategyCarouselContent: [
+			strategyCardContent: [
 				{
 					title: "sTrategy",
 					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
