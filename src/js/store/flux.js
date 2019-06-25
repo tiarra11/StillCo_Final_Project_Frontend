@@ -112,12 +112,34 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 			serviceCatalog: [],
-			shoppingBag: []
+			shoppingBag: [],
+			client: [],
+			tempLoggedUser: null,
+			token: null
+			// {
+			// 	client_id: 2,
+			// 	name: "Martin",
+			// 	email: "self.email",
+			// 	password: "self.password",
+			// 	client_login_status: false
+			// }
 		},
 
 		actions: {
-			authenticateLogin: (email, password) => {
-				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/login";
+			logoutClient: id => {
+				const store = getStore();
+				store.tempLoggedUser = null;
+				store.token = null;
+				localStorage.setItem("store", JSON.stringify(store));
+			},
+			authenticateLogin: (email, password, history) => {
+				const store = getStore();
+				const url = process.env.HOST + "/login";
+				let loggedUser = store.client.find(item => {
+					return item.email == email;
+				});
+
+				console.log(loggedUser);
 				fetch(url, {
 					method: "POST",
 					headers: {
@@ -132,8 +154,47 @@ const getState = ({ getStore, setStore }) => {
 					.then(response => response.json())
 					.then(token => {
 						console.log(token);
+						const store = getStore();
 						localStorage.setItem("jwt", token.jwt);
+						store.token = token.jwt;
+						store.tempLoggedUser = loggedUser;
+						localStorage.setItem("store", JSON.stringify(store));
+						// history.push("/dashboard");
+					})
+					.then(changeStatus => {
+						fetch(
+							"https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client/" +
+								loggedUser.client_id,
+							{
+								method: "PUT",
+								headers: {
+									"Content-Type": "application/json",
+									authorization: "Bearer " + localStorage.getItem("jwt")
+								},
+								body: JSON.stringify({
+									client_login_status: true
+								})
+							}
+						);
+					})
+					.then(getClientBack => {
+						const store = getStore();
+						const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
+						fetch(url, {
+							method: "GET",
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(response => response.json())
+							.then(data => {
+								// let { store } = this.state;
+								store.client = data;
+								setStore({ store });
+							})
+							.catch(error => console.error("Error: It didn't work. Try again", error));
 					});
+				setStore({ tempLoggedUser: loggedUser });
 			},
 
 			createClient: (name, email, password, history) => {

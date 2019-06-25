@@ -9,6 +9,7 @@ import { Still } from "./views/aboutStill";
 import { Portfolio } from "./views/portfolio";
 import { Services } from "./views/services";
 import { Login } from "./views/login";
+import { Logout } from "./views/logout";
 import { Register } from "./views/register";
 import { ALaCartPreScheduler } from "./views/aLaCartPreScheduler";
 import { Scheduler } from "./views/scheduler";
@@ -40,6 +41,7 @@ export class Layout extends React.Component {
 							<Route exact path="/portfolio" component={Portfolio} />
 							<Route exact path="/services" component={Services} />
 							<Route exact path="/login" component={Login} />
+							<Route exact path="/logout" component={Logout} />
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/footer" component={Footer} />
 							<Route exact path="/contact" component={Contact} />
