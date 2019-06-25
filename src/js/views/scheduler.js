@@ -10,17 +10,19 @@ import "../../styles/index.scss";
 export class Scheduler extends React.Component {
 	render() {
 		return (
-			<div className="d-flex justify-content-center">
-				<ListGroup className="col-md-4 mx-5">
-					<h1>Available Times</h1>
-					<ListGroup.Item action variant="light">
-						1PM
-					</ListGroup.Item>
-					<ListGroup.Item action variant="light">
-						4PM
-					</ListGroup.Item>
-				</ListGroup>
-				<div className="form-check">
+			<div>
+				<div className="d-flex justify-content-center">
+					<ListGroup className="col-md-4 mx-5">
+						<h1>Available Times</h1>
+						<ListGroup.Item action variant="light">
+							1PM
+						</ListGroup.Item>
+						<ListGroup.Item action variant="light">
+							4PM
+						</ListGroup.Item>
+					</ListGroup>
+				</div>
+				<div className="form-check text-center">
 					<input
 						className="form-check-input"
 						type="radio"
@@ -32,6 +34,8 @@ export class Scheduler extends React.Component {
 					<label className="form-check-label" htmlFor="inlineCheckbox1">
 						Phone Call
 					</label>
+				</div>
+				<div className="form-check text-center">
 					<input
 						className="form-check-input"
 						type="radio"

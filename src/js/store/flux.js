@@ -1,23 +1,24 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			strategyCarouselContent: [
+			strategyCardContent: [
 				{
-					title: "sTrategy",
+					title: "",
 					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
 					header: "Plan. It. Out.",
-					info:
-						"We help you build trust with your customers, through a comprehensive layout of your business objectives and how to execute them."
+					info: ""
 				},
 				{
-					title: "identiTy",
-					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
-					info: "Design, Logos, and Websites."
+					title: "",
+					image:
+						"https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/759968/settings_images/5IbPvI1gRqqi3sgZUpJ5_MORE_LOGO_AllTeal300-01.png",
+
+					info: ""
 				},
 				{
-					title: "markeTing",
+					title: "",
 					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
-					info: "Put yourself out there. We'll help you do that."
+					info: ""
 				}
 			],
 
@@ -58,57 +59,63 @@ const getState = ({ getStore, setStore }) => {
 			strategy: [
 				{
 					name: "Organizational Analysis",
-					description: "j",
-					price: 200,
+					description:
+						"An organizational analysis is a diagnostic business process that can help organizations understand their performance, look for problem areas, identify opportunities, and develop a plan of action for improving performance. In short, an organizational analysis is a review of the basic components of an organization.",
+					price: 2000,
 					rep: "martin"
 				},
 				{
 					name: "	Action Planning",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 200,
+						"An action plan is a detailed plan outlining actions needed to reach one or more goals. Alternatively, businessdictionary.com defines an action plan as a sequence of steps that must be taken, or activities that must be performed well, for a strategy to succeed",
+					price: 3000,
 					rep: "joao"
 				},
 				{
 					name: "Corporate Re-Branding",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
-					price: 200,
+						"Rebranding is the process of changing the corporate image of an organisation. It is a market strategy of giving a new name, symbol, or change in design for an already-established brand. ... Rebranding is good for the business, but at the same time it may be risky. ",
+					price: 5000,
 					rep: "hernan"
 				}
 			],
 			identity: [
 				{
 					name: "logo design",
-					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+					description: "LOGO ",
+					price: 1000
 				},
 				{
 					name: "website design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 2000
 				},
 				{
 					name: "product design",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 1500
 				}
 			],
 			marketing: [
 				{
 					name: "Advertising",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 2000
 				},
 				{
 					name: "Seo",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 1700
 				},
 				{
 					name: "Social Media Managment",
 					description:
-						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. "
+						"Business strategy is the firm's working plan for achieving its vision, prioritizing objectives, competing successfully, and optimizing financial performance with its business model. ",
+					price: 2500
 				}
 			],
 			serviceCatalog: [],
