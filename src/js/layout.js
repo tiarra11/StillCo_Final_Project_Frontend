@@ -45,7 +45,11 @@ export class Layout extends React.Component {
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/footer" component={Footer} />
 							<Route exact path="/single-service/:theindex" component={SingleService} />
-							<Route exact path="/single-portfoliopage/:theindex" component={SinglePortfolioPage} />
+							<Route
+								exact
+								path="/single-portfoliopage/strategy/:theindex"
+								component={SinglePortfolioPage}
+							/>
 							<Route exact path="/contact" component={Contact} />
 							<Route exact path="/terms" component={Terms} />
 							<Route exact path="/prescheduler" component={ALaCartPreScheduler} />

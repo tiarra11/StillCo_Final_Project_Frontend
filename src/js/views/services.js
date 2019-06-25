@@ -25,12 +25,16 @@ export class Services extends React.Component {
 					<div className="row">
 						<div className="col-md-4">
 							<h2 className="text-center maintitle1">Strategy</h2>
+							<p>
+								We help you build trust with your customers, through a comprehensive layout of your
+								business objectives and how to execute them.
+							</p>
 
 							<Context.Consumer>
 								{({ store, action }) => {
 									return store.strategy.map((item, index) => {
 										return (
-											<Link to={"/single-portfoliopage/" + index} key={index}>
+											<Link to={"/single-portfoliopage/strategy/" + index} key={index}>
 												<div className="card col-12 my-4 servicecard2">
 													{/* This is where the onClick will be set for the selection of the package. */}
 													<div className="card-body">
@@ -48,17 +52,20 @@ export class Services extends React.Component {
 
 						<div className="col-md-4">
 							<h2 className="text-center maintitle2">Identity</h2>
+							<p>Design, Logos, and Websites.</p>
 							<Context.Consumer>
 								{({ store }) => {
 									return store.identity.map((item, index) => {
 										return (
-											<div key={index} className="card col-12 my-4 servicecard2">
-												{/* This is where the onClick will be set for the selection of the package. */}
-												<div className="card-body">
-													<p className="card-text servicetext">{item.name}</p>
-													<p className="card-text servicetext">$ {item.price}</p>
+											<Link to={"/single-portfoliopage/" + index} key={index}>
+												<div key={index} className="card col-12 my-4 servicecard2">
+													{/* This is where the onClick will be set for the selection of the package. */}
+													<div className="card-body">
+														<p className="card-text servicetext">{item.name}</p>
+														<p className="card-text servicetext">$ {item.price}</p>
+													</div>
 												</div>
-											</div>
+											</Link>
 										);
 									});
 								}}
@@ -67,6 +74,7 @@ export class Services extends React.Component {
 
 						<div className="col-md-4">
 							<h2 className="text-center maintitle3">Marketing</h2>
+							<p>Put yourself out there. We Will help you do that.</p>
 							<Context.Consumer>
 								{({ store }) => {
 									return store.marketing.map((item, index) => {
