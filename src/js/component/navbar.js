@@ -37,7 +37,6 @@ export class Navbar extends React.Component {
 								Services
 							</Link>
 						</li>
-<<<<<<< HEAD
 						<Context.Consumer>
 							{({ store }) => {
 								let loginMessage = "";
@@ -68,23 +67,6 @@ export class Navbar extends React.Component {
 								);
 							}}
 						</Context.Consumer>
-=======
-						<li className="nav-item mr-5">
-							<Link to="/login" className="navbarlink">
-								<div>
-									<span id="collective_collecNav">Collec</span>
-									<span id="collective_TNav">T</span>
-									<span id="collective_iveNav">ive</span>
-								</div>
-							</Link>
-						</li>
-						<li className="nav-item mr-4">
-							{" "}
-							<Link to="/cart">
-								<i className="fas fa-shopping-cart" style={{ color: "white" }} />
-							</Link>
-						</li>
->>>>>>> b336ee4f1a91b9f6a61856a0bdcde566252486f8
 					</ul>
 				</div>
 			</nav>
