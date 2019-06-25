@@ -314,22 +314,32 @@ input[type=submit]:hover {
                                 background-color:rgb(255, 255, 255);
                                 border: 5px solid black;
                                 border-radius: 25px;
+                                background: linear-gradient(120deg, #e7e7e7 50%, #ffffff 70%);
+
                             }
 
                             .servicecard2 {
                                 background-color: rgb(155, 153, 153);
+                                padding:2px;
                             }
 
                             .servicecard2:hover {
-                            border: 1px solid black;
-                            text-decoration: none !important;
+                            border: 2px solid rgb(17, 17, 17);
+                            padding: 1px;
+                            background-color: rgb(185, 185, 185);
+	                        background-color: rgb(68,68,68); /* For IEs */
+                            -moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+                            -webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+                            box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+	zoom: 1;
+    	position: relative; /* This protects the inner element from being blurred */
                             }
 
                             .servicetext {
                                 color:white;
-                            }
-                            .servicetext:hover > p {
-                                text-decoration: none;
                             }
 
                             .bg-details1 {
