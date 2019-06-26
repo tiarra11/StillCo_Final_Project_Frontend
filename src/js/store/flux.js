@@ -3,20 +3,20 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			strategyCardContent: [
 				{
-					title: "",
+					title: "Corporate Re-Branding",
 					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
-					header: "Plan. It. Out.",
+					header: "",
 					info: ""
 				},
 				{
-					title: "",
+					title: "Web Design",
 					image:
 						"https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/759968/settings_images/5IbPvI1gRqqi3sgZUpJ5_MORE_LOGO_AllTeal300-01.png",
 
 					info: ""
 				},
 				{
-					title: "",
+					title: "Social Media Managment",
 					image: "https://www.canny-creative.com/wp-content/uploads/2019/02/digital-marketing-tools.jpg",
 					info: ""
 				}

@@ -9,13 +9,19 @@ import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 import { Session } from "bc-react-session";
 
-// Session.start({
-// 	payload: {
-// 		name: [],
-// 		price: []
-// 	},
-// 	expiration: 86400000
-// });
+Session.start({
+	payload: [
+		{
+			name: "t",
+			price: "priceless"
+		},
+		{
+			name: "me",
+			price: "free"
+		}
+	],
+	expiration: 86400000
+});
 
 export class Services extends React.Component {
 	render() {
@@ -41,7 +47,7 @@ export class Services extends React.Component {
 												<div className="card col-12 my-4 servicecard2">
 													{/* This is where the onClick will be set for the selection of the package. */}
 													<div className="card-body">
-														<p className="card-text servicetext">{item.name} </p>
+														<p className="card-text servicetext">{item.name}</p>
 
 														<p className="card-text servicetext">$ {item.price}</p>
 													</div>

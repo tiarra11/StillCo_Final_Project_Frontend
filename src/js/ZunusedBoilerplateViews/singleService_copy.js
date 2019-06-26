@@ -11,15 +11,10 @@ export class SingleService extends React.Component {
 					let index = this.props.match.params.theindex;
 					console.log(index);
 					return (
-						<div className="container m-auto ">
+						<div className="container">
 							<div className="row">
 								<div className="col-md-6 m-auto">
 									<h1>{store.strategyCardContent[index].title}</h1>
-									<img
-										className="card-img-top"
-										src="https://cdn-images-1.medium.com/max/2600/1*K16E0qvbkeekeQMsJjOCVg.png"
-										alt="Card image cap"
-									/>
 								</div>
 							</div>
 
