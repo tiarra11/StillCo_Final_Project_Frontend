@@ -12,24 +12,21 @@ export class CardStrategy extends React.Component {
 				{({ store, action }) => {
 					return store.strategyCardContent.map((item, index) => {
 						return (
-							<div className="card text-white" key={{ index }}>
-								<img
-									className="card-img-top"
-									src="https://images.unsplash.com/photo-1558810629-dcdb3f924dbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMDk0fQ&auto=format&fit=crop&w=664&q=80"
-									alt="Card image cap"
-								/>
-								<div className="card-img-overlay">
-									<div className="dark-transparent">
-										<h5 className="card-title">{item.title}</h5>
-										<p className="card-text">{item.info}</p>
-										<Link to={"/single-service/" + index}>
-											<button type="button" className="btn btn-info">
-												Details
-											</button>
-										</Link>
+							<Link to={"/single-service/" + index} key={{ index }} style={{ width: "30%" }}>
+								<div className="card text-white">
+									<img
+										className="card-img-top"
+										src="https://images.unsplash.com/photo-1535954741680-a2e24eb05418?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2558&q=80"
+										alt="Card image cap"
+									/>
+									<div className="card-img-overlay">
+										<div className="dark-transparent ">
+											<h5 className="card-title text-center">{item.title}</h5>
+											<p className="card-text">{item.info}</p>
+										</div>
 									</div>
 								</div>
-							</div>
+							</Link>
 						);
 					});
 				}}

@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/index.scss";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
+import { Session } from "bc-react-session";
 
 export class SinglePortfolioPage extends React.Component {
 	render() {
@@ -18,14 +19,29 @@ export class SinglePortfolioPage extends React.Component {
 								</div>
 							</div>
 							<div className="row">
+								<h1>{store.strategy[index].name}</h1>
+
 								<div className="col-md-6 m-auto">{store.strategy[index].description}</div>
 							</div>
 							<div className="row">
 								<div className="col-md-6 m-auto">
-									<button type="button" className="btn btn-info">
-										{store.strategy[index].price}
+									<button
+										type="button"
+										className="btn btn-info"
+										onClick={() => {
+											const serviceInfo = {
+												name: store.strategy[index].name,
+												price: store.strategy[index].price
+											};
+											const { payload } = Session.get();
+											const s = payload.concat(serviceInfo);
+											Session.setPayload({
+												payload: "hellooooooo"
+											});
+											console.log(Session.get());
+										}}>
+										Add to Cart
 									</button>
-									<p>{store.strategy[index].description}</p>
 								</div>
 							</div>
 						</div>
