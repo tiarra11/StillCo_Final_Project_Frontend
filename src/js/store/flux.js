@@ -131,13 +131,9 @@ const getState = ({ getStore, setStore }) => {
 			// 	client_login_status: false
 			// }
 		},
-
 		actions: {
 			logoutClient: id => {
-				const store = getStore();
-				store.tempLoggedUser = null;
-				store.token = null;
-				localStorage.setItem("store", JSON.stringify(store));
+				setStore({ tempLoggedUser: null, token: null });
 			},
 			authenticateLogin: (email, password, history) => {
 				const store = getStore();
@@ -161,32 +157,23 @@ const getState = ({ getStore, setStore }) => {
 					.then(response => response.json())
 					.then(token => {
 						console.log(token);
-						const store = getStore();
-						localStorage.setItem("jwt", token.jwt);
-						store.token = token.jwt;
-						store.tempLoggedUser = loggedUser;
-						localStorage.setItem("store", JSON.stringify(store));
-						// history.push("/dashboard");
+						setStore({ token: token.jwt, tempLoggedUser: loggedUser });
+						history.push("/dashboard");
 					})
 					.then(changeStatus => {
-						fetch(
-							"https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client/" +
-								loggedUser.client_id,
-							{
-								method: "PUT",
-								headers: {
-									"Content-Type": "application/json",
-									authorization: "Bearer " + localStorage.getItem("jwt")
-								},
-								body: JSON.stringify({
-									client_login_status: true
-								})
-							}
-						);
+						fetch(`${process.env.HOST}/client/${loggedUser.client_id}`, {
+							method: "PUT",
+							headers: {
+								"Content-Type": "application/json",
+								authorization: "Bearer " + store.token
+							},
+							body: JSON.stringify({
+								client_login_status: true
+							})
+						});
 					})
 					.then(getClientBack => {
-						const store = getStore();
-						const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
+						const url = process.env.HOST + "/client";
 						fetch(url, {
 							method: "GET",
 							headers: {
@@ -195,9 +182,8 @@ const getState = ({ getStore, setStore }) => {
 						})
 							.then(response => response.json())
 							.then(data => {
-								// let { store } = this.state;
-								store.client = data;
-								setStore({ store });
+								const store = getStore();
+								setStore({ client: data });
 							})
 							.catch(error => console.error("Error: It didn't work. Try again", error));
 					});
@@ -205,7 +191,7 @@ const getState = ({ getStore, setStore }) => {
 			},
 
 			createClient: (name, email, password, history) => {
-				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/client";
+				const url = process.env.HOST + "/client";
 				fetch(url, {
 					method: "POST",
 					headers: {
@@ -229,7 +215,7 @@ const getState = ({ getStore, setStore }) => {
 			},
 
 			addToShoppingBag: () => {
-				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/service_catalog";
+				const url = process.env.HOST + "/service_catalog";
 			},
 
 			// const store = getStore();
@@ -245,7 +231,7 @@ const getState = ({ getStore, setStore }) => {
 			// 		});
 
 			generateOrder: cvv => {
-				const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/orders";
+				const url = process.env.HOST + "/orders";
 				fetch(url, {
 					method: "POST",
 					headers: {

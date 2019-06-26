@@ -14,32 +14,16 @@ const injectContext = PassedComponent => {
 			//this will be passed as the context value
 			this.state = getState({
 				getStore: () => this.state.store,
-				setStore: updatedStore =>
+				setStore: updatedStore => {
+					localStorage.setItem("store", JSON.stringify(Object.assign(this.state.store, updatedStore)));
 					this.setState({
 						store: Object.assign(this.state.store, updatedStore)
-					})
+					});
+				}
 			});
 		}
 
-		componentDidMount() {
-			const store = localStorage.getItem("store");
-			if (typeof store != "undefined") this.setState({ store: JSON.parse(store) });
-			console.log("This is your store i localstorage: ", store);
-			fetch(`${process.env.HOST}/services`, {
-				method: "GET",
-				headers: {
-					"Content-Type": "application/json"
-				}
-			})
-				.then(resp => {
-					return resp.json();
-				})
-				.then(data => {
-					console.log("Able to fetch catalog", data);
-					this.state.setStore({ serviceCatalog: data });
-				})
-				.catch(error => console.error("Error: It didn't work. Try again", error));
-
+		loggedInDiDMount(currentLoogedInClient) {
 			fetch(`${process.env.HOST}/client`, {
 				method: "GET",
 				headers: {
@@ -53,6 +37,29 @@ const injectContext = PassedComponent => {
 					let { store } = this.state;
 					store.client = data;
 					this.setState({ store });
+				})
+				.catch(error => console.error("Error: It didn't work. Try again", error));
+		}
+
+		componentDidMount() {
+			const store = localStorage.getItem("store");
+			if (typeof store != "undefined") {
+				this.setState({ store: JSON.parse(store) });
+				if (store.token) this.loggedInDiDMount(store.client);
+			}
+			console.log("This is your store i localstorage: ", store);
+			fetch(`${process.env.HOST}/services`, {
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json"
+				}
+			})
+				.then(resp => {
+					return resp.json();
+				})
+				.then(data => {
+					console.log("Able to fetch catalog", data);
+					this.state.setStore({ serviceCatalog: data });
 				})
 				.catch(error => console.error("Error: It didn't work. Try again", error));
 		}

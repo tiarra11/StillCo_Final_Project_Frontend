@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Context } from "../store/appContext";
-
-export class Navbar extends React.Component {
+import PropTypes from "prop-types";
+class Navbar extends React.Component {
 	render() {
 		let path = window.location.pathname;
 
@@ -38,34 +38,32 @@ export class Navbar extends React.Component {
 							</Link>
 						</li>
 						<Context.Consumer>
-							{({ store }) => {
-								let loginMessage = "";
-								let path = "/login";
-
-								const userStatus = store.client.find(item => {
-									return item.client_login_status === true;
-								});
-								// let node = document.createElement("LI");
-								// let parent = document.querySelector(".logged");
-								if (userStatus) {
-									// loginMessage = "Welcome " + userStatus.email;
-									loginMessage = "Logout ";
-									path = "/logout";
-									// let textLogout = document.createTextNode("Logout");
-									// node.appendChild(textLogout);
-									// parent.appendChild(node);
-								} else {
-									loginMessage = "Login";
-								}
-
-								return (
-									<li className="nav-item mr-5">
-										<Link to={path} className="navbarlink">
-											{loginMessage}
+							{({ store, actions }) => (
+								<li className="nav-item mr-5">
+									{!store.token ? (
+										<Link to="/login" className="navbarlink">
+											<div>
+												<span id="collective_collecNav">The Collec</span>
+												<span id="collective_TNav">T</span>
+												<span id="collective_iveNav">ive </span>
+												<span id="collective_loginNav"> Login</span>
+											</div>
 										</Link>
-									</li>
-								);
-							}}
+									) : (
+										<span
+											className="navbarlink"
+											onClick={() => {
+												actions.logoutClient(
+													store.tempLoggedUser.client_id,
+													this.props.history
+												);
+											}}
+											id="collective_logoutNav">
+											Logout
+										</span>
+									)}
+								</li>
+							)}
 						</Context.Consumer>
 					</ul>
 				</div>
@@ -73,49 +71,9 @@ export class Navbar extends React.Component {
 		);
 	}
 }
-{
-	/* <Context.Consumer>
-{({ store }) => {
-	let declaredLogin = "";
-	let path = "/login";
-	const loggedInClient = store.client.find(client => {
-		return client.client_login_status === true;
-	});
-	if (loggedInClient) {
-		declaredLogin = "Welcome " + loggedInClient.email;
-		path = "/logout";
-	} else {
-		// declaredLogin = "Login";
-		declaredLogin = (
-			<li className="nav-item mr-5">
-				<Link to="/login" className="navbarlink">
-					<div>
-						<span id="collective_collecNav">The Collec</span>
-						<span id="collective_TNav">T</span>
-						<span id="collective_iveNav">ive </span>
-						<span id="collective_loginNav"> Login</span>
 
-						{this.state.client_login_status ? <div>true</div> : 
-						
-						<div>false</div>}
-					</div>
-				</Link>
-			</li>
-		);
-	}
-}}
-</Context.Consumer> */
-}
+export default withRouter(Navbar);
 
-{
-	/* <li className="nav-item mr-5">
-<Link to="/login" className="navbarlink">
-	<div>
-		<span id="collective_collecNav">The Collec</span>
-		<span id="collective_TNav">T</span>
-		<span id="collective_iveNav">ive </span>
-		<span id="collective_loginNav"> Login</span>
-	</div>
-</Link>
-</li> */
-}
+Navbar.propTypes = {
+	history: PropTypes.object
+};
