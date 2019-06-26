@@ -47,7 +47,7 @@ const injectContext = PassedComponent => {
 				this.setState({ store: JSON.parse(store) });
 				if (store.token) this.loggedInDiDMount(store.client);
 			}
-			console.log("This is your store i localstorage: ", store);
+			console.log("This is your store in localstorage: ", store);
 			fetch(`${process.env.HOST}/services`, {
 				method: "GET",
 				headers: {

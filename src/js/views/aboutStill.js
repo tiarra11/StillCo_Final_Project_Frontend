@@ -60,13 +60,13 @@ export class Still extends React.Component {
 				<div className="col-md d-flex justify-content-center">
 					<div className="backgrounddiv" />
 				</div>*/}
-				</div>
-				<div className="container-fluid pt-5">
-					<div className="row">
-						<div className="fadein col-md-12 text-center about m-auto">
-							<div className="aboutus">
-								STill &amp; Co wants to give you the sTill experience your brand needs. We have a small
-								team of creative artists that will expand your brand to a savvy company.
+					<div className="container-fluid pt-5">
+						<div className="row">
+							<div className="fadein col-md-12 text-center about m-auto">
+								<div className="aboutus">
+									STill &amp; Co wants to give you the sTill experience your brand needs. We have a
+									small team of creative artists that will expand your brand to a savvy company.
+								</div>
 							</div>
 						</div>
 					</div>

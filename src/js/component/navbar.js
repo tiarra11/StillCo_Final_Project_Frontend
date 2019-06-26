@@ -43,7 +43,8 @@ class Navbar extends React.Component {
 									{!store.token ? (
 										<Link to="/login" className="navbarlink">
 											<div>
-												<span id="collective_collecNav">The Collec</span>
+												<span id="collective_TheNav">The </span>
+												<span id="collective_collecNav">Collec</span>
 												<span id="collective_TNav">T</span>
 												<span id="collective_iveNav">ive </span>
 												<span id="collective_loginNav"> Login</span>

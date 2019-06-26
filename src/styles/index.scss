@@ -9,6 +9,15 @@
 
 
         //STILL NAVBAR STYLIZING
+                            .navbarlink {
+                                color:whitesmoke;
+                                font-family: 'Dancing Script', cursive;
+                                font-size:  20px;
+                            }
+                            .navbarlink:hover {
+                                color: black;
+                                text-decoration: none;
+                            }
                     //Still Homepage link (Top-Left Corner Link)
                             .stillLogoNav{
                                 color:whitesmoke;
@@ -32,16 +41,6 @@
                             }
 
                     //"Portfolio" Link
-                            .navbarlink {
-                                color:whitesmoke;
-                                font-family: 'Dancing Script', cursive;
-                                font-size:  20px;
-                            }
-                            .navbarlink:hover {
-                                color: black;
-                                text-decoration: none;
-                            }
-
                             #portfolio_porNav{
                                 position: relative;
                                 bottom: 1px;
@@ -54,15 +53,12 @@
                                 bottom: 1px;
                             }
 
-                    //"Collective" Link
-                            .navbarlink {
-                                color:whitesmoke;
-                                font-family: 'Dancing Script', cursive;
-                                font-size:  20px;
-                            }
-                            .navbarlink:hover {
-                                color: black;
-                                text-decoration: none;
+                    //"Collective" Link (Login & Logout)
+                        // LoginLink
+                            #collective_TheNav{
+                                font-family: 'Cinzel', serif;
+                                position: relative;
+                                bottom: 1px;
                             }
                             #collective_collecNav{
                                 position: relative;
@@ -81,6 +77,7 @@
                                 bottom: 1px;
                             }
                             #collective_logoutNav{
+                                font-family: 'Cinzel', serif;
                                 position: relative;
                                 bottom: 1px;
                             }
