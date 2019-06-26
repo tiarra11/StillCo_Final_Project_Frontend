@@ -1,6 +1,6 @@
 // @import "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
 // @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
-
+@import "views/dashboard";
 
         //GENERAL STYLING (That affects every page)
                             body{
@@ -72,6 +72,15 @@
                                 font-family: 'Cinzel', serif;
                             }
                             #collective_iveNav{
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #collective_loginNav{
+                                font-family: 'Cinzel', serif;
+                                position: relative;
+                                bottom: 1px;
+                            }
+                            #collective_logoutNav{
                                 position: relative;
                                 bottom: 1px;
                             }

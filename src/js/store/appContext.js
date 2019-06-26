@@ -11,19 +11,44 @@ const injectContext = PassedComponent => {
 		constructor(props) {
 			super(props);
 
-			//this will be passed as the contenxt value
+			//this will be passed as the context value
 			this.state = getState({
 				getStore: () => this.state.store,
-				setStore: updatedStore =>
+				setStore: updatedStore => {
+					localStorage.setItem("store", JSON.stringify(Object.assign(this.state.store, updatedStore)));
 					this.setState({
 						store: Object.assign(this.state.store, updatedStore)
-					})
+					});
+				}
 			});
 		}
 
+		loggedInDiDMount(currentLoogedInClient) {
+			fetch(`${process.env.HOST}/client`, {
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json"
+				}
+			})
+				.then(resp => {
+					return resp.json();
+				})
+				.then(data => {
+					let { store } = this.state;
+					store.client = data;
+					this.setState({ store });
+				})
+				.catch(error => console.error("Error: It didn't work. Try again", error));
+		}
+
 		componentDidMount() {
-			const url = "https://3000-d1676f3c-a4e9-47f2-8ccb-eac2b3415504.ws-us0.gitpod.io/services";
-			fetch(url, {
+			const store = localStorage.getItem("store");
+			if (typeof store != "undefined") {
+				this.setState({ store: JSON.parse(store) });
+				if (store.token) this.loggedInDiDMount(store.client);
+			}
+			console.log("This is your store i localstorage: ", store);
+			fetch(`${process.env.HOST}/services`, {
 				method: "GET",
 				headers: {
 					"Content-Type": "application/json"

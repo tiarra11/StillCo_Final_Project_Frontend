@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import { Row } from "react-bootstrap";
-
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
@@ -36,7 +36,7 @@ export class Login extends React.Component {
 												onClick={() => {
 													let email = document.querySelector("[type=email]").value;
 													let password = document.querySelector("[type=password]").value;
-													actions.authenticateLogin(email, password);
+													actions.authenticateLogin(email, password, this.props.history);
 												}}>
 												Log In
 											</Button>
@@ -54,3 +54,6 @@ export class Login extends React.Component {
 		);
 	}
 }
+Login.propTypes = {
+	history: PropTypes.object
+};

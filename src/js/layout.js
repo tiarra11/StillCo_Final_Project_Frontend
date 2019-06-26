@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import Navbar from "./component/navbar";
 import { Still } from "./views/aboutStill";
 
 import { Portfolio } from "./views/portfolio";
@@ -11,6 +11,7 @@ import { Services } from "./views/services";
 import { SingleService } from "./views/singleService";
 import { SinglePortfolioPage } from "./views/singlePortfolioPage";
 import { Login } from "./views/login";
+import { Dashboard } from "./views/dashboard";
 import { Register } from "./views/register";
 import { ALaCartPreScheduler } from "./views/aLaCartPreScheduler";
 import { Scheduler } from "./views/scheduler";
@@ -57,7 +58,7 @@ export class Layout extends React.Component {
 							<Route exact path="/checkout" component={Checkout} />
 							<Route exact path="/cart" component={Cart} />
 							<Route exact path="/confirmation" component={Confirmation} />
-							<Route exact path="/dashboard" render={() => <h1>This will be the dashboard</h1>} />
+							<Route exact path="/dashboard" component={Dashboard} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

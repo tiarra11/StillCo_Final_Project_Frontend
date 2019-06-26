@@ -1,11 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-export class Navbar extends React.Component {
-	// componentDidMount() {
-	// 	document.querySelector("nav").style.backgroundColor = "green";
-	// }
-
+import { Link, withRouter } from "react-router-dom";
+import { Context } from "../store/appContext";
+import PropTypes from "prop-types";
+class Navbar extends React.Component {
 	render() {
 		let path = window.location.pathname;
 
@@ -25,7 +22,7 @@ export class Navbar extends React.Component {
 							</Link>
 						</li>
 					</ul>
-					<ul className="navbar-nav ml-auto ">
+					<ul className="navbar-nav ml-auto logged">
 						<li className="nav-item mr-4">
 							<Link to="/portfolio" className="navbarlink">
 								<div>
@@ -40,24 +37,43 @@ export class Navbar extends React.Component {
 								Services
 							</Link>
 						</li>
-						<li className="nav-item mr-5">
-							<Link to="/login" className="navbarlink">
-								<div>
-									<span id="collective_collecNav">Collec</span>
-									<span id="collective_TNav">T</span>
-									<span id="collective_iveNav">ive</span>
-								</div>
-							</Link>
-						</li>
-						<li className="nav-item mr-4">
-							{" "}
-							<Link to="/cart">
-								<i className="fas fa-shopping-cart" style={{ color: "white" }} />
-							</Link>
-						</li>
+						<Context.Consumer>
+							{({ store, actions }) => (
+								<li className="nav-item mr-5">
+									{!store.token ? (
+										<Link to="/login" className="navbarlink">
+											<div>
+												<span id="collective_collecNav">The Collec</span>
+												<span id="collective_TNav">T</span>
+												<span id="collective_iveNav">ive </span>
+												<span id="collective_loginNav"> Login</span>
+											</div>
+										</Link>
+									) : (
+										<span
+											className="navbarlink"
+											onClick={() => {
+												actions.logoutClient(
+													store.tempLoggedUser.client_id,
+													this.props.history
+												);
+											}}
+											id="collective_logoutNav">
+											Logout
+										</span>
+									)}
+								</li>
+							)}
+						</Context.Consumer>
 					</ul>
 				</div>
 			</nav>
 		);
 	}
 }
+
+export default withRouter(Navbar);
+
+Navbar.propTypes = {
+	history: PropTypes.object
+};
